@@ -1,0 +1,74 @@
+/* Regras de dimensionamento de caixa */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Evita a inflação do tamanho da fonte */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 62.5%;
+}
+
+/* Remove a margem padrão em favor de um melhor controle em CSS de autoria */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove estilos de lista em elementos ul, ol com uma função de lista, o que sugere que o estilo padrão será removido */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Definir padrões do body principal */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Defina alturas de linha mais curtas em títulos e elementos interativos */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Equilibra a quebra automática de texto nos títulos */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Um elemento que não possui uma classe obtém estilos padrão */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Torna as imagens mais fáceis de trabalhar */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Herda fontes para entradas e botões */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Certifique-se de que as áreas de texto sem um atributo rows não sejam minúsculas */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Qualquer coisa que tenha sido ancorada deve ter margem de rolagem extra */
+:target {
+  scroll-margin-block: 5ex;
+}
