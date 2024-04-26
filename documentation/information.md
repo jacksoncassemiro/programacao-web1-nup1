@@ -43,18 +43,32 @@
    - Formulário de contato para enviar perguntas ou feedback.
    - Informações de contato (telefone, e-mail, endereço físico).
    - Perguntas frequentes (FAQ) para problemas comuns.
-6. **Fag perguntas**
-   - Lista de perguntas frequentes e suas respostas.
-   - Organizadas por categorias, se aplicável.
-   - Pesquisa para encontrar perguntas específicas.
-7. **Login**
+   - **Fag perguntas:**
+     - Lista de perguntas frequentes e suas respostas.
+     - Organizadas por categorias, se aplicável.
+     - Pesquisa para encontrar perguntas específicas.
+6. **Login**
    - Formulário de login para clientes registrados.
    - Opção para criar uma nova conta, se ainda não tiver uma.
    - Recuperação de senha, se esquecida.
-8. **Perfil**
+7. **Perfil**
    - Informações da conta do usuário (endereço de entrega, detalhes de pagamento, etc.).
    - Histórico de pedidos e status de entrega.
    - Configurações de conta (editar perfil, alterar senha, etc.).
+8. **Histórico de Pedidos:**
+   - Mostra uma lista dos pedidos anteriores feitos pelo usuário.
+   - Cada pedido listado pode incluir informações como número do pedido, data da compra, status do pedido e subtotal total da compra.
+   - Um link ou botão pode permitir ao usuário visualizar mais detalhes sobre cada pedido.
+   - **Detalhes do Pedido:**
+     - Ao clicar em um pedido específico, o usuário é direcionado para uma página com detalhes específicos desse pedido.
+     - Nessa página, podem ser exibidas informações como lista de produtos comprados, quantidade de cada item, preço unitário, subtotal por produto, custo de envio, total da compra e método de pagamento utilizado.
+     - Também pode incluir informações sobre o endereço de entrega e qualquer mensagem ou instrução especial fornecida pelo usuário durante a compra.
+   - **Opções de Revisão e Ação:**
+     - Pode incluir opções para o usuário revisar o pedido, imprimir uma fatura ou comprovante de compra e/ou entrar em contato com o suporte caso haja algum problema com o pedido.
+     - Também pode haver opções para reordenar itens do pedido anteriormente feito.
+   - **Feedback e Avaliação:**
+     - Algumas plataformas permitem que os usuários deixem feedback sobre o pedido ou avaliem a experiência de compra.
+     - Isso pode incluir a oportunidade de avaliar a qualidade dos produtos, o processo de envio, o atendimento ao cliente, entre outros aspectos relevantes.
 
 ## Padrão do Header e Footer
 
@@ -144,15 +158,25 @@ Com essa distribuição em mente, vamos aplicar as cores nas diferentes partes d
    - Formulário de contato: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
    - Informações de contato: Texto em cinza escuro (rgb(51, 51, 51)).
    - Perguntas frequentes: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
-6. **Perguntas Frequentes (FAQ):**
-   - Lista de perguntas frequentes: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
-7. **Login:**
+   - **Perguntas Frequentes (FAQ):**
+     - Lista de perguntas frequentes: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
+6. **Login:**
    - Formulário de login: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), botões em Pantone 137 C (#FFA100).
    - Recuperação de senha: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-8. **Perfil:**
+7. **Perfil:**
    - Informações da conta: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
    - Histórico de pedidos: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
    - Configurações de conta: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), botões em Pantone 137 C (#FFA100).
+8. **Histórico de Pedidos:**
+   - Fundo branco (#FFFFFF)
+   - Texto em cinza escuro (rgb(51, 51, 51))
+   - **Detalhes do Pedido:**
+     - Fundo branco (#FFFFFF)
+     - Texto em cinza escuro (rgb(51, 51, 51))
+   - **Opções de Revisão e Ação:**
+     - Botões em Pantone 137 C (#FFA100)
+   - **Feedback e Avaliação:**
+     - Cores padrão para feedback e avaliação, conforme especificado anteriormente.
 
 Essa distribuição de cores garantirá uma consistência visual em todas as páginas do site de e-commerce, mantendo a legibilidade e a acessibilidade para os usuários.
 
