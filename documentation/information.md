@@ -16,6 +16,16 @@
 - Ecommerce
 - Redesign do site Americanas
 
+## Exemplos de Sites
+
+Site a ser feito redesign: [Americanas](https://www.americanas.com.br/ "‌")
+
+1. [Mercado Livre](https://www.mercadolivre.com.br/ "‌")
+2. [Casas Bahia ](https://www.casasbahia.com.br/ "‌")
+3. [Magazine Luiza](https://www.magazineluiza.com.br/ "‌")
+4. [Netshoes](https://www.netshoes.com.br/ "‌")
+5. [Shopee](https://shopee.com.br/ "‌")
+
 # Páginas a serem desenvolvidas
 
 1. **Inicial**
