@@ -6,7 +6,6 @@ Esse é um arquivo teste para o estilo do site.
 
 /* Variáveis Globais */
 :root {
-
   /* Cores */
   --cor-dominante: #F80032; /* Vermelho primário da marca */
   --cor-neutra: #FFFFFF; /* Branco, para fundos e textos sobre o vermelho */
@@ -23,22 +22,24 @@ Esse é um arquivo teste para o estilo do site.
   --espaco-medio: 0.5rem; /* 8px */
   --espaco-grande: 1rem; /* 16px */
   --espaco-extra-grande: 1.5rem; /* 24px */
-  --preenchimento-extra-grande: calc(var(--espaco-extra-grande) * 1.333rem); /* Aumento de 33% */
-  --margem-extra-grande: calc(var(--espaco-extra-grande) * 1.333rem); /* Aumento de 33% */
 
-  /* Raio (Border Radius) */
-  --raio-pequeno: var(--espaco-pequeno);
-  --raio-medio: var(--espaco-medio);
-  --raio-grande: var(--espaco-grande);
+  /* Preenchimento/Margem */
+  --preenchimento-extra-grande: 2rem; /* 32px */
+  --margem-extra-grande: 2rem; /* 32px */
 
-  /* Sombra (Box Shadow) */
+  /* Raio */
+  --raio-pequeno: 0.25rem; /* 4px */
+  --raio-medio: 0.5rem; /* 8px */
+  --raio-grande: 1rem; /* 16px */
+
+  /* Sombra */
   --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
   --sombra-elevada: 0 4px 8px rgba(0, 0, 0, 0.1);
   --sombra-profunda: 0 8px 16px rgba(0, 0, 0, 0.1);
 
   /* Escala de Grid */
-  --tamanho-coluna-base: 8px;
-  --gutter: 16px;
+  --tamanho-coluna-base: 0.5rem; /* 8px */
+  --gutter: 1rem; /* 16px */
   --coluna-1: calc(var(--tamanho-coluna-base) * 1);
   --coluna-2: calc(var(--tamanho-coluna-base) * 2 + var(--gutter));
   --coluna-3: calc(var(--tamanho-coluna-base) * 3 + var(--gutter) * 2);
@@ -82,5 +83,4 @@ Esse é um arquivo teste para o estilo do site.
   /* Padding e Margin */
   --padding-elementos: 0.5rem; /* 8px */
   --margin-elementos: 1rem; /* 16px */
-  
 }
