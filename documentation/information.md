@@ -110,143 +110,385 @@ Site a ser feito redesign: [Americanas](https://www.americanas.com.br/ "‌")
 
 # Guia de Tipografia
 
-### 1. Família Tipográfica:
+### 1. **Família Tipográfica**
 
 - Família Padrão: Roboto, sans-serif
 
-### 2. Tamanhos e Pesos das Fontes:
+1. **Tamanhos e Pesos das Fontes**
+   - **Títulos (Headings):**
+     - **XL (Extra Large):**
+       - Tamanho: 2.5 vezes o tamanho padrão da fonte
+         - Rem: 2.5rem
+         - Pixels: 40px
+       - Peso: Negrito
+       - Line height: 1.2 vezes o tamanho da fonte
+         - Rem: 1.2rem
+         - Pixels: 19.2px
+       - Letter spacing: 0.02em
+     - **LG (Large):**
+       - Tamanho: 2 vezes o tamanho padrão da fonte
+         - Rem: 2rem
+         - Pixels: 32px
+       - Peso: Negrito
+       - Line height: 1.2 vezes o tamanho da fonte
+         - Rem: 1.2rem
+         - Pixels: 19.2px
+       - Letter spacing: 0.02em
+     - **MD (Medium):**
+       - Tamanho: 1.5 vezes o tamanho padrão da fonte
+         - Rem: 1.5rem
+         - Pixels: 24px
+       - Peso: Negrito
+       - Line height: 1.2 vezes o tamanho da fonte
+         - Rem: 1.2rem
+         - Pixels: 19.2px
+       - Letter spacing: 0.01em
+     - **SM (Small):**
+       - Tamanho: 1.125 vezes o tamanho padrão da fonte
+         - Rem: 1.125rem
+         - Pixels: 18px
+       - Peso: Negrito
+       - Line height: 1.2 vezes o tamanho da fonte
+         - Rem: 1.2rem
+         - Pixels: 19.2px
+       - Letter spacing: 0.01em
+   - **Parágrafos (Paragraphs):**
+     - **Texto Padrão:**
+       - Tamanho: Tamanho padrão da fonte
+         - Rem: 1rem
+         - Pixels: 16px
+       - Peso: Regular
+       - Line height: 1.5 vezes o tamanho da fonte
+         - Rem: 1.5rem
+         - Pixels: 24px
+       - Letter spacing: 0.01em
+   - **Caption (Legendas):**
+     - **Tamanho:**
+       - 0.875 vezes o tamanho padrão da fonte
+         - Rem: 0.875rem
+         - Pixels: 14px
+       - Peso: Regular
+       - Line height: 1.2 vezes o tamanho da fonte
+         - Rem: 1.2rem
+         - Pixels: 19.2px
+       - Letter spacing: 0.01em
+2. **Cores do Texto**
+   - Texto Padrão: #333333
+3. **Uso de Tamanhos Ideais**
+   - **Brand:**
+     - H1: Usado para cabeçalhos principais, como o nome da marca na página inicial.
+     - H2: Utilizado para subtítulos ou chamadas importantes em banners promocionais.
+     - H3: Aplicado em títulos de seções e categorias.
+     - H4: Usado para títulos de menor importância, subcategorias ou elementos semelhantes.
+   - **Global:**
+     - Parágrafos: Utilizados para descrições de produtos, textos de carrinho de compras e outras informações gerais.
+     - Caption: Usado para legendas em imagens de produtos, ícones ou em botões de ação secundária.
+4. **Padding e Margin**
+   - **Para Todos os Elementos Citados:**
+     - **Padding:** 0.5rem (equivalente a 8px)
+     - **Margin:** 1rem (equivalente a 16px)
+       Esses valores podem ser um ponto de partida, e pode ser ajustado conforme necessário para atender aos requisitos de design específicos de cada elemento e para garantir uma aparência visualmente equilibrada em toda a interface do usuário. Por exemplo, elementos maiores podem exigir mais espaço ao redor deles para evitar que pareçam muito apertados, enquanto elementos menores podem precisar de menos espaço para evitar que o layout pareça muito espaçado.
 
-#### Títulos (Headings):
+### Header (Cabeçalho):
 
-- **H1:**
-  - Tamanho: 2.5rem (40px)
-  - Peso: Roboto-Bold
-  - Line height: 1.2 (24px)
-  - Letter spacing: 0.02em
-- **H2:**
-  - Tamanho: 2rem (32px)
-  - Peso: Roboto-Bold
-  - Line height: 1.2 (19.2px)
-  - Letter spacing: 0.02em
-- **H3:**
-  - Tamanho: 1.5rem (24px)
-  - Peso: Roboto-Bold
-  - Line height: 1.2 (19.2px)
-  - Letter spacing: 0.01em
+- **Logo da empresa ou nome da marca:** H1 (XL), Roboto-Bold
+- **Barra de pesquisa:** Parágrafo, Roboto-Regular
+- **Links para categorias principais de produtos:** Parágrafo, Roboto-Regular
+- **Ícone do carrinho de compras com contador de itens:** Parágrafo, Roboto-Regular
+- **Botão de login ou perfil:** Parágrafo, Roboto-Regular
 
-#### Parágrafos:
+### Footer (Rodapé):
 
-- **Tamanho:** 1rem (16px)
-- **Peso:** Roboto-Regular
-- **Line height:** 1.5 (24px)
-- **Letter spacing:** 0.01em
+- **Informações de contato:** Parágrafo, Roboto-Regular
+- **Links úteis:** Parágrafo, Roboto-Regular
+- **Redes sociais da empresa:** Parágrafo, Roboto-Regular
+- **Opções de idioma:** Parágrafo, Roboto-Regular
+- **Newsletter:** Parágrafo, Roboto-Regular
+- **Informações Legais:** Parágrafo, Roboto-Regular
+- **Selos de Segurança e Certificações:** Parágrafo, Roboto-Regular
+- **Informações de Pagamento:** Parágrafo, Roboto-Regular
+- **Informações de Entrega:** Parágrafo, Roboto-Regular
 
-#### Legendas (Caption):
+### Página Inicial:
 
-- **Tamanho:** 0.875rem (14px)
-- **Peso:** Roboto-Regular
-- **Line height:** 1.2 (19.2px)
-- **Letter spacing:** 0.01em
+- **Destaques de produtos:** H2 (LG), Roboto-Bold
+- **Carrossel de imagens:** Parágrafo, Roboto-Regular
+- **Ofertas especiais:** Parágrafo, Roboto-Regular
+- **Testemunhos ou avaliações de clientes:** Parágrafo, Roboto-Regular
+- **Links rápidos para categorias:** Parágrafo, Roboto-Regular
 
-### 3. Cores do Texto:
+### Página dos Produtos:
 
-- **Texto Padrão:** #333333
+- **Lista de produtos:** Parágrafo, Roboto-Regular
+- **Opções de filtro:** Parágrafo, Roboto-Regular
+- **Imagens dos produtos com título, preço e avaliação média:** Parágrafo, Roboto-Regular
+- **Botão de adicionar ao carrinho:** Parágrafo, Roboto-Regular
+- **Paginação ou scroll infinito:** Parágrafo, Roboto-Regular
 
-### 4. Uso de Tamanhos Ideais:
+### Página de cada Produto:
 
-- **Brand:**
-  - H1: Cabeçalhos principais, como o nome da marca na página inicial.
-  - H2: Subtítulos ou chamadas importantes em banners promocionais.
-  - H3: Títulos de seções e categorias.
-- **Global:**
-  - Parágrafos: Descrições de produtos, textos de carrinho de compras e outras informações gerais.
-  - Legendas (Caption): Legendas em imagens de produtos, ícones ou em botões de ação secundária.
+- **Imagens do produto:** Parágrafo, Roboto-Regular
+- **Descrição detalhada:** Parágrafo, Roboto-Regular
+- **Opções de seleção:** Parágrafo, Roboto-Regular
+- **Avaliações e comentários:** Parágrafo, Roboto-Regular
+- **Botões para compartilhar:** Parágrafo, Roboto-Regular
+- **Botão de adicionar ao carrinho e opção para comprar agora:** Parágrafo, Roboto-Regular
 
-### 5. Padding e Margin:
+### Carrinho de Compra:
 
-- Utilize valores proporcionais ao tamanho da fonte para garantir uma boa legibilidade e espaçamento entre os elementos de texto.
+- **Lista de produtos:** Parágrafo, Roboto-Regular
+- **Opções de atualização:** Parágrafo, Roboto-Regular
+- **Calculadora de frete:** Parágrafo, Roboto-Regular
+- **Resumo da compra:** Parágrafo, Roboto-Regular
+- **Links adicionais:** Parágrafo, Roboto-Regular
+
+### Contato e Suporte:
+
+- **Formulário de contato:** Parágrafo, Roboto-Regular
+- **Informações de contato:** Parágrafo, Roboto-Regular
+- **Perguntas frequentes (FAQ):** Parágrafo, Roboto-Regular
+- **Chat ao vivo ou bot:** Parágrafo, Roboto-Regular
+- **Links para tutoriais ou guias de uso dos produtos (se aplicável):** Parágrafo, Roboto-Regular
+
+### Login:
+
+- **Formulário de login:** Parágrafo, Roboto-Regular
+- **Opção de lembrar senha:** Parágrafo, Roboto-Regular
+- **Links adicionais:** Parágrafo, Roboto-Regular
+
+### Perfil:
+
+- **Informações do usuário:** Parágrafo, Roboto-Regular
+- **Opções de edição:** Parágrafo, Roboto-Regular
+- **Histórico de pedidos:** Parágrafo, Roboto-Regular
+- **Opções de pagamento:** Parágrafo, Roboto-Regular
+- **Botões adicionais:** Parágrafo, Roboto-Regular
+
+### Histórico de Pedidos:
+
+- **Lista de pedidos:** Parágrafo, Roboto-Regular
+- **Botões de ação:** Parágrafo, Roboto-Regular
 
 # Sugestões de cores (falta verificar e aprovar)
 
-Considerando a Regra 60-30-10 em UI Design e as cores fornecidas, podemos criar um padrão de uso das cores para os elementos, tipos de informações textuais, profundidade e contraste.
+#### CORES INSTITUCIONAIS:
 
-- **Cor Dominante (60%): Pantone Red 185 C (#F80032)**
-  - Esta cor será predominante nas interfaces, ocupando a maior parte do espaço e fornecendo consistência visual.
-- **Cor Secundária (30%): Pantone 7621 C (#AF191F)**
-  - Esta cor será usada como contraste em relação à cor dominante, fornecendo equilíbrio e harmonia. Pode ser aplicada em elementos secundários, como fundos de seções ou botões de ação secundária.
-- **Cor de Destaque (10%): Pantone 137 C (#FFA100)**
-  - Esta cor será reservada para elementos que merecem destaque, como botões de call-to-action, links importantes e ícones. Devido à sua natureza vibrante, ela chamará a atenção dos usuários para as ações desejadas.
+- **#F80032 (Dominante)**: Vermelho primário da marca.
+- **#FFFFFF (Neutra)**: Branco, para fundos e textos sobre o vermelho.
 
-Com essa distribuição em mente, vamos aplicar as cores nas diferentes partes das páginas:
+#### PALETA AUXILIAR:
 
-- **Header (Cabeçalho):**
-  - Fundo: Pantone Red 185 C (#F80032)
-  - Texto: Branco (#FFFFFF)
-  - Links: Pantone 137 C (#FFA100)
-- **Footer (Rodapé):**
-  - Fundo: Pantone 7621 C (#AF191F)
-  - Texto: Branco (#FFFFFF)
-  - Links: Pantone 137 C (#FFA100)
-- **Conteúdo Principal (Páginas, Produtos, etc.):**
-  - Fundo: Branco (#FFFFFF)
-  - Texto: Cinza escuro (rgb(51, 51, 51))
-  - Destaques (Botões, Links): Pantone 137 C (#FFA100)
-- **Botões de Ação:**
-  - Fundo: Pantone 137 C (#FFA100)
-  - Texto: Branco (#FFFFFF)
-  - Hover (Ao passar o mouse): Pantone 7621 C (#AF191F)
-- **Ícones:**
-  - Cor: Pantone 137 C (#FFA100)
-- **Campos de Formulário:**
-  - Borda: Pantone Red 185 C (#F80032)
-  - Texto: Cinza escuro (rgb(51, 51, 51))
-- **Mensagens de Sucesso/Erro:**
-  - Sucesso: Verde ou Azul
-  - Erro: Vermelho
+- **#3FB5B5 (Secundária)**: Azul claro, para complementar o vermelho dominante e proporcionar contraste.
+- **#FFA100 (Destaque)**: Laranja, para destacar elementos importantes e chamar a atenção do usuário.
 
-## Subparte com sugestão de cores para as páginas
+#### CORES NEUTRAS:
 
-1. **Página Inicial:**
-   - Destaque de produtos: Pantone Red 185 C (#F80032) para fundo, Pantone 137 C (#FFA100) para botões de ação.
-   - Barra de pesquisa: Fundo branco (#FFFFFF), texto cinza escuro (rgb(51, 51, 51)).
-   - Menu de categorias: Texto em cinza escuro (rgb(51, 51, 51)), com links destacados em Pantone 137 C (#FFA100).
-   - Recursos de navegação: Links em Pantone 137 C (#FFA100).
-2. **Resultado de Pesquisa de Produtos:**
-   - Lista de produtos: Fundo branco (#FFFFFF), texto cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
-   - Opções de filtragem: Borda em Pantone Red 185 C (#F80032), texto em cinza escuro (rgb(51, 51, 51)).
-   - Paginação: Links em Pantone 137 C (#FFA100).
-3. **Página do Produto:**
-   - Imagens do produto: Fundo branco (#FFFFFF), borda em Pantone Red 185 C (#F80032).
-   - Descrição do produto: Texto em cinza escuro (rgb(51, 51, 51)).
-   - Opções de seleção: Texto em cinza escuro (rgb(51, 51, 51)), botões de ação em Pantone 137 C (#FFA100).
-   - Avaliações e comentários: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-4. **Carrinho de Compra:**
-   - Lista de produtos: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), botões de ação em Pantone 137 C (#FFA100).
-   - Opções de edição: Borda em Pantone Red 185 C (#F80032), texto em cinza escuro (rgb(51, 51, 51)).
-   - Subtotal e total: Texto em cinza escuro (rgb(51, 51, 51)).
-   - Botão de checkout: Pantone 137 C (#FFA100).
-5. **Contato e Suporte:**
-   - Formulário de contato: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-   - Informações de contato: Texto em cinza escuro (rgb(51, 51, 51)).
-   - Perguntas frequentes: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
-   - **Perguntas Frequentes (FAQ):**
-     - Lista de perguntas frequentes: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), links em Pantone 137 C (#FFA100).
-6. **Login:**
-   - Formulário de login: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), botões em Pantone 137 C (#FFA100).
-   - Recuperação de senha: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-7. **Perfil:**
-   - Informações da conta: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-   - Histórico de pedidos: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)).
-   - Configurações de conta: Fundo branco (#FFFFFF), texto em cinza escuro (rgb(51, 51, 51)), botões em Pantone 137 C (#FFA100).
-8. **Histórico de Pedidos:**
-   - Fundo branco (#FFFFFF)
-   - Texto em cinza escuro (rgb(51, 51, 51))
-   - **Detalhes do Pedido:**
-     - Fundo branco (#FFFFFF)
-     - Texto em cinza escuro (rgb(51, 51, 51))
-   - **Opções de Revisão e Ação:**
-     - Botões em Pantone 137 C (#FFA100)
-   - **Feedback e Avaliação:**
-     - Cores padrão para feedback e avaliação, conforme especificado anteriormente.
+- **#333333**: Cinza escuro, para textos e elementos de fundo.
+- **#666666**: Cinza médio, para textos e elementos secundários.
+- **#CCCCCC**: Cinza claro, para fundos e separadores.
+- **#E6E6E6**: Cinza extra claro, para fundos e separadores mais claros.
+- **#000000**: Preto, para textos e elementos de destaque sobre fundos claros.
 
-Essa distribuição de cores garantirá uma consistência visual em todas as páginas do site de e-commerce, mantendo a legibilidade e a acessibilidade para os usuários.
+## Aplicação nas Páginas e Elementos:
+
+### Header (Cabeçalho) e Footer (Rodapé):
+
+- **Fundo**: #F80032 (Dominante)
+- **Texto**: #FFFFFF (Neutra)
+  - **Links (Normal)**:
+    - **Fundo**: #F80032
+    - **Texto**: #FFFFFF
+    - **Ícone**: #FFFFFF
+    - **Borda**: #FFFFFF
+  - **Links (Hover)**:
+    - **Fundo**: #3FB5B5
+    - **Texto**: #FFFFFF
+    - **Ícone**: #FFFFFF
+    - **Borda**: #FFFFFF
+
+### Página Inicial:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Destaques de Produtos**: #F80032 (Dominante)
+  - **Carrossel de Imagens (Setas)**:
+    - **Fundo**: #FFFFFF
+    - **Ícone**: #F80032 (Dominante)
+  - **Ofertas Especiais**: #3FB5B5 (Secundária)
+  - **Testemunhos ou Avaliações**: #666666 (Neutra)
+  - **Links Rápidos para Categorias**: #3FB5B5 (Secundária)
+
+### Página dos Produtos:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Lista de Produtos**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Botão Adicionar ao Carrinho**:
+      - **Normal**:
+        - **Fundo**: #F80032 (Dominante)
+        - **Texto**: #FFFFFF
+        - **Borda**: #FFFFFF
+      - **Hover**:
+        - **Fundo**: #FFA100 (Destaque)
+        - **Texto**: #FFFFFF
+        - **Borda**: #FFFFFF
+      - **Desativado**:
+        - **Fundo**: #CCCCCC
+        - **Texto**: #666666
+        - **Borda**: #CCCCCC
+  - **Opções de Filtro**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Hover**: #3FB5B5 (Secundária)
+  - **Imagens dos Produtos**:
+    - **Fundo**: #FFFFFF
+    - **Borda**: #333333
+
+### Página de cada Produto:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Imagens do Produto**:
+    - **Fundo**: #FFFFFF
+    - **Borda**: #333333
+  - **Descrição Detalhada**: #333333 (Neutra)
+  - **Opções de Seleção**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Avaliações e Comentários**: #666666 (Neutra)
+  - **Botões para Compartilhar**:
+    - **Normal**:
+      - **Fundo**: #FFFFFF
+      - **Ícone**: #FFA100 (Destaque)
+    - **Hover**:
+      - **Fundo**: #FFA100 (Destaque)
+      - **Ícone**: #FFFFFF
+
+### Carrinho de Compra:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Lista de Produtos**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Botão Remover Item**: #3FB5B5 (Secundária)
+  - **Opções de Atualização**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Calculadora de Frete**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Resumo da Compra**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Botão Finalizar Compra**:
+      - **Normal**:
+        - **Fundo**: #FFA100 (Destaque)
+        - **Texto**: #FFFFFF
+
+### Contato e Suporte:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Formulário de Contato**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Informações de Contato**: #666666 (Neutra)
+  - **Perguntas Frequentes (FAQ)**: #666666 (Neutra)
+  - **Chat ao Vivo ou Bot**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+
+### Login:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Formulário de Login**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Links Adicionais**:
+    - **Normal**:
+      - **Fundo**: #FFFFFF
+      - **Texto**: #3FB5B5 (Secundária)
+    - **Hover**:
+      - **Fundo**: #3FB5B5 (Secundária)
+      - **Texto**: #FFFFFF
+
+### Perfil:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Informações do Usuário**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Histórico de Pedidos**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Borda**: #3FB5B5 (Secundária)
+  - **Botões Adicionais**:
+    - **Normal**:
+      - **Fundo**: #FFFFFF
+      - **Texto**: #3FB5B5 (Secundária)
+    - **Hover**:
+      - **Fundo**: #3FB5B5 (Secundária)
+      - **Texto**: #FFFFFF
+
+### Histórico de Pedidos:
+
+- **Fundo**: #FFFFFF (Neutra)
+- **Texto**: #333333 (Neutra)
+  - **Lista de Pedidos**:
+    - **Fundo**: #FFFFFF
+    - **Texto**: #333333
+    - **Botão Ver Detalhes**: #3FB5B5 (Secundária)
+
+# Escala de Espaçamento:
+
+- **Espaçamento Pequeno**: 4px
+- **Espaçamento Médio**: 8px
+- **Espaçamento Grande**: 16px
+- **Espaçamento Extra-Grande**: 24px
+
+# Escala de Preenchimento (Padding) e Margem (Margin):
+
+- **Preenchimento/Margem Mínimo**: 4px
+- **Preenchimento/Margem Pequeno**: 8px
+- **Preenchimento/Margem Médio**: 16px
+- **Preenchimento/Margem Grande**: 24px
+- **Preenchimento/Margem Extra-Grande**: 32px
+
+# Escala de Raio (Border Radius):
+
+- **Raio Pequeno**: 4px
+- **Raio Médio**: 8px
+- **Raio Grande**: 16px
+
+# Escala de Sombra (Box Shadow):
+
+- **Sombra Suave**: 0 2px 4px rgba(0, 0, 0, 0.1)
+- **Sombra Elevada**: 0 4px 8px rgba(0, 0, 0, 0.1)
+- **Sombra Profunda**: 0 8px 16px rgba(0, 0, 0, 0.1)
+
+Essa escala fornece uma variedade de opções para espaçamento, preenchimento, margem, raio e sombra, permitindo flexibilidade no design e consistência visual em todo o sistema. Esses valores podem ser ajustados conforme necessário para se adequarem melhor ao design específico do e-commerce.
+
+# Escala de Grid:
+
+- **Tamanho da Coluna Base**: 8px
+- **Gutter (Espaçamento entre Colunas)**: 16px
+
+# Sistema de Grade Flexível:
+
+- **1 Coluna**: 8px
+- **2 Colunas**: 32px (8px + 16px + 8px)
+- **3 Colunas**: 56px (8px + 16px + 8px + 16px + 8px)
+- **4 Colunas**: 80px (8px + 16px + 8px + 16px + 8px + 16px + 8px)
+- **5 Colunas**: 104px (8px + 16px + 8px + 16px + 8px + 16px + 8px + 16px + 8px)
