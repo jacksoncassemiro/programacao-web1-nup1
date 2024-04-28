@@ -7,200 +7,80 @@ Esse é um arquivo teste para o estilo do site.
 /* Variáveis Globais */
 :root {
 
-  /* Variáveis de Tipografia */
-  --fonte-primaria: 'Roboto', Arial, sans-serif; /* Fonte primária */
-  --fonte-secundaria: 'Helvetica Neue', Arial, sans-serif; /* Fonte secundária */
-  --tamanho-corpo-texto: 1rem; /* Tamanho do corpo do texto em rem */
-  --espessura-fonte-corpo: 400; /* Espessura da fonte para o corpo do texto */
-  --espessura-fonte-titulo: 600; /* Espessura da fonte para títulos */
-  --linha-corpo-texto: 1.5; /* Altura da linha para o corpo do texto */
+  /* Cores */
+  --cor-dominante: #F80032; /* Vermelho primário da marca */
+  --cor-neutra: #FFFFFF; /* Branco, para fundos e textos sobre o vermelho */
+  --cor-secundaria: #3FB5B5; /* Azul claro, para complementar o vermelho dominante e proporcionar contraste */
+  --cor-destaque: #FFA100; /* Laranja, para destacar elementos importantes e chamar a atenção do usuário */
+  --cor-texto: #333333; /* Cinza escuro, para textos e elementos de fundo */
+  --cor-texto-neutra: #666666; /* Cinza médio, para textos e elementos secundários */
+  --cor-separador: #CCCCCC; /* Cinza claro, para fundos e separadores */
+  --cor-separador-extra: #E6E6E6; /* Cinza extra claro, para fundos e separadores mais claros */
+  --cor-texto-destaque: #000000; /* Preto, para textos e elementos de destaque sobre fundos claros */
 
-  /* Variáveis de Espaçamento e Tamanho */
-  --espacamento-elementos: 1rem; /* Espaçamento entre elementos em rem */
-  --tamanho-texto-corpo: 1rem; /* Tamanho do texto para o corpo do texto em rem */
-  --margem-padding: 1rem; /* Margens e padding em rem */
+  /* Espaçamento */
+  --espaco-pequeno: 0.25rem; /* 4px */
+  --espaco-medio: 0.5rem; /* 8px */
+  --espaco-grande: 1rem; /* 16px */
+  --espaco-extra-grande: 1.5rem; /* 24px */
+  --preenchimento-extra-grande: calc(var(--espaco-extra-grande) * 1.333rem); /* Aumento de 33% */
+  --margem-extra-grande: calc(var(--espaco-extra-grande) * 1.333rem); /* Aumento de 33% */
 
-  /* Variáveis de Cores */
-  --cor-primaria: #F80032; /* Cor primária */
-  --cor-secundaria: #AF191F; /* Cor secundária */
-  --cor-destaque: #FFA100; /* Cor de destaque */
-  --cor-texto: #333; /* Cor do texto principal */
-  --cor-fundo: #FFFFFF; /* Cor de fundo */
-  --cor-borda: #F80032; /* Cor da borda */
-  --cor-sombra: rgba(0, 0, 0, 0.1); /* Cor da sombra */
+  /* Raio (Border Radius) */
+  --raio-pequeno: var(--espaco-pequeno);
+  --raio-medio: var(--espaco-medio);
+  --raio-grande: var(--espaco-grande);
 
-  /* Variáveis de Espessura e Sombreamento */
-  --espessura-borda: 1px; /* Espessura da borda em pixels */
-  --profundidade-sombra: 0.25rem; /* Profundidade da sombra em rem */
-  --raio-borda: 0.25rem; /* Raio do arredondamento da borda em rem */
+  /* Sombra (Box Shadow) */
+  --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --sombra-elevada: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --sombra-profunda: 0 8px 16px rgba(0, 0, 0, 0.1);
 
-}
+  /* Escala de Grid */
+  --tamanho-coluna-base: 8px;
+  --gutter: 16px;
+  --coluna-1: calc(var(--tamanho-coluna-base) * 1);
+  --coluna-2: calc(var(--tamanho-coluna-base) * 2 + var(--gutter));
+  --coluna-3: calc(var(--tamanho-coluna-base) * 3 + var(--gutter) * 2);
+  --coluna-4: calc(var(--tamanho-coluna-base) * 4 + var(--gutter) * 3);
+  --coluna-5: calc(var(--tamanho-coluna-base) * 5 + var(--gutter) * 4);
 
-/* Estilo do Header */
-header {
-  background-color: var(--cor-primaria);
-  color: #FFF;
-  padding: var(--margem-padding);
-}
+  /* Família Tipográfica */
+  --fonte-padrao: 'Roboto', sans-serif;
 
-header .logo {
-  font-family: var(--fonte-primaria);
-  font-weight: var(--espessura-fonte-titulo);
-  font-size: 2rem;
-}
+  /* Tamanhos e Pesos das Fontes */
+  --xl-fonte-tamanho: 2.5rem; /* 40px */
+  --xl-fonte-peso: 700; /* Negrito */
+  --xl-line-height: 1.2;
+  --xl-letter-spacing: 0.02em;
 
-header nav {
-  display: flex;
-  align-items: center;
-}
+  --lg-fonte-tamanho: 2rem; /* 32px */
+  --lg-fonte-peso: 700; /* Negrito */
+  --lg-line-height: 1.2;
+  --lg-letter-spacing: 0.02em;
 
-header nav ul {
-  list-style: none;
-  display: flex;
-}
+  --md-fonte-tamanho: 1.5rem; /* 24px */
+  --md-fonte-peso: 700; /* Negrito */
+  --md-line-height: 1.2;
+  --md-letter-spacing: 0.01em;
 
-header nav ul li {
-  margin-right: var(--espacamento-elementos);
-}
+  --sm-fonte-tamanho: 1.125rem; /* 18px */
+  --sm-fonte-peso: 700; /* Negrito */
+  --sm-line-height: 1.2;
+  --sm-letter-spacing: 0.01em;
 
-header nav ul li:last-child {
-  margin-right: 0;
-}
+  --paragrafo-fonte-tamanho: 1rem; /* 16px */
+  --paragrafo-fonte-peso: 400; /* Regular */
+  --paragrafo-line-height: 1.5;
+  --paragrafo-letter-spacing: 0.01em;
 
-header nav ul li a {
-  color: #FFF;
-  text-decoration: none;
-  font-family: var(--fonte-primaria);
-  font-weight: var(--espessura-fonte-corpo);
-}
+  --caption-fonte-tamanho: 0.875rem; /* 14px */
+  --caption-fonte-peso: 400; /* Regular */
+  --caption-line-height: 1.2;
+  --caption-letter-spacing: 0.01em;
 
-/* Estilo do Footer */
-footer {
-  background-color: var(--cor-secundaria);
-  color: #FFF;
-  padding: var(--margem-padding);
-}
-
-footer nav ul {
-  list-style: none;
-  display: flex;
-}
-
-footer nav ul li {
-  margin-right: var(--espacamento-elementos);
-}
-
-footer nav ul li:last-child {
-  margin-right: 0;
-}
-
-footer nav ul li a {
-  color: #FFF;
-  text-decoration: none;
-  font-family: var(--fonte-primaria);
-  font-weight: var(--espessura-fonte-corpo);
-}
-
-/* Estilo do Conteúdo Principal */
-.main-content {
-  padding: var(--margem-padding);
-}
-
-.product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--espacamento-elementos);
-}
-
-.product-item {
-  background-color: #FFF;
-  padding: var(--margem-padding);
-  border: var(--espessura-borda) solid var(--cor-borda);
-  border-radius: var(--raio-borda);
-}
-
-.product-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.product-item h3 {
-  font-family: var(--fonte-primaria);
-  font-weight: var(--espessura-fonte-titulo);
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.product-item p {
-  font-family: var(--fonte-primaria);
-  font-weight: var(--espessura-fonte-corpo);
-  font-size: var(--tamanho-texto-corpo);
-  line-height: var(--linha-corpo-texto);
-  margin-bottom: 1rem;
-}
-
-.product-item .btn {
-  background-color: var(--cor-destaque);
-  color: #FFF;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: var(--raio-borda);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.product-item .btn:hover {
-  background-color: #AF191F;
-}
-
-/* Estilo para Botões */
-.btn {
-  background-color: var(--cor-destaque);
-  color: #FFF;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: var(--raio-borda);
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #AF191F;
-}
-
-/* Estilo para Formulários */
-.form-control {
-  width: 100%;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio-borda);
-  font-family: var(--fonte-primaria);
-  font-size: var(--tamanho-texto-corpo);
-}
-
-/* Estilo para Links */
-a {
-  color: var(--cor-destaque);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #AF191F;
-}
-
-/* Estilo para Cabeçalhos */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--fonte-primaria);
-  font-weight: var(--fonte-negrito);
-  margin-bottom: 1rem;
-}
-
-/* Estilo para Rodapés */
-footer {
-  background-color: var(--cor-secundaria);
-  color: #FFF;
-  padding: 1rem;
-  text-align: center;
+  /* Padding e Margin */
+  --padding-elementos: 0.5rem; /* 8px */
+  --margin-elementos: 1rem; /* 16px */
+  
 }
