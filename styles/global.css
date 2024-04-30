@@ -147,6 +147,7 @@ Esse é um arquivo teste para o estilo do site.
 
 html {
   font-family: 'Roboto-Regular', sans-serif;
+  font-size: var(--paragrafo-fonte-tamanho);
 }
 
 #header {
@@ -164,6 +165,12 @@ html {
     padding-bottom: 12px;
   }
 
+  #logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #logo img {
     width: 100%;
     height: 100%;
@@ -175,6 +182,37 @@ html {
     width: 50px;
     height: 50px;
     overflow: hidden;
+  }
+
+  #busca {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+    border-radius: 0.25rem;
+    background-color: var(--cor-neutra);
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    &:focus-within {
+      border: 1px solid var(--cor-secundaria);
+    }
+  }
+
+  #busca input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0.5rem 0.75rem;
+    flex-grow: 1;
+  }
+
+  #busca img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+    color: var(--cor-dominante);
   }
 }
 
