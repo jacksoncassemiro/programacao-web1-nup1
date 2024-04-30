@@ -84,3 +84,67 @@ Esse é um arquivo teste para o estilo do site.
   --padding-elementos: 0.5rem; /* 8px */
   --margin-elementos: 1rem; /* 16px */
 }
+
+@font-face {
+  font-family: 'Roboto-Black';
+  src: url('/assets/font/Roboto/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-BlackItalic';
+  src: url('/assets/font/Roboto/Roboto-BlackItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('/assets/font/Roboto/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-BoldItalic';
+  src: url('/assets/font/Roboto/Roboto-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Italic';
+  src: url('/assets/font/Roboto/Roboto-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('/assets/font/Roboto/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-LightItalic';
+  src: url('/assets/font/Roboto/Roboto-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('/assets/font/Roboto/Roboto-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-MediumItalic';
+  src: url('/assets/font/Roboto/Roboto-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/assets/font/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-Thin';
+  src: url('/assets/font/Roboto/Roboto-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-ThinItalic';
+  src: url('/assets/font/Roboto/Roboto-ThinItalic.ttf') format('truetype');
+}
+
+html {
+  font-family: 'Roboto-Regular', sans-serif;
+}
