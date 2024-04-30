@@ -3,6 +3,9 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
 /* Evita a inflação do tamanho da fonte */
@@ -11,6 +14,7 @@ html {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   font-size: 62.5%;
+  box-sizing: inherit;
 }
 
 /* Remove a margem padrão em favor de um melhor controle em CSS de autoria */
