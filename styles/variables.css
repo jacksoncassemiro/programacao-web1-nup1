@@ -8,6 +8,7 @@ Esse é um arquivo teste para o estilo do site.
 :root {
   /* Cores */
   --cor-dominante: #F80032; /* Vermelho primário da marca */
+  --cor-dominante-secundario: #AF191F; /* Vermelho primário da marca */
   --cor-neutra: #FFFFFF; /* Branco, para fundos e textos sobre o vermelho */
   --cor-secundaria: #3FB5B5; /* Azul claro, para complementar o vermelho dominante e proporcionar contraste */
   --cor-destaque: #FFA100; /* Laranja, para destacar elementos importantes e chamar a atenção do usuário */
