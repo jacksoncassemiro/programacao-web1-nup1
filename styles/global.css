@@ -170,6 +170,13 @@ html {
     }
   }
 
+  .grou_address_search{
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-grande);
+    width: 500px;
+  }
+
   #endereco {
     display: flex;
     align-items: center;
@@ -200,7 +207,7 @@ html {
   #busca {
     display: flex;
     align-items: center;
-    width: 500px;
+    flex-grow: 1;
     border-radius: 0.25rem;
     background-color: var(--cor-neutra);
     overflow: hidden;
@@ -240,7 +247,7 @@ html {
     div.account__menu {
       position: absolute;
       width: 100%;
-      top: 130%;
+      top: 40px;
       background-color: var(--cor-neutra);
       padding: var(--espaco-grande);
       border-radius: 0.25rem;
