@@ -1,90 +1,3 @@
-/* 
-
-Esse é um arquivo teste para o estilo do site.
-
-*/
-
-/* Variáveis Globais */
-:root {
-  /* Cores */
-  --cor-dominante: #F80032; /* Vermelho primário da marca */
-  --cor-neutra: #FFFFFF; /* Branco, para fundos e textos sobre o vermelho */
-  --cor-secundaria: #3FB5B5; /* Azul claro, para complementar o vermelho dominante e proporcionar contraste */
-  --cor-destaque: #FFA100; /* Laranja, para destacar elementos importantes e chamar a atenção do usuário */
-  --cor-texto: #333333; /* Cinza escuro, para textos e elementos de fundo */
-  --cor-texto-neutra: #666666; /* Cinza médio, para textos e elementos secundários */
-  --cor-separador: #CCCCCC; /* Cinza claro, para fundos e separadores */
-  --cor-separador-extra: #E6E6E6; /* Cinza extra claro, para fundos e separadores mais claros */
-  --cor-texto-destaque: #000000; /* Preto, para textos e elementos de destaque sobre fundos claros */
-
-  /* Espaçamento */
-  --espaco-pequeno: 0.25rem; /* 4px */
-  --espaco-medio: 0.5rem; /* 8px */
-  --espaco-grande: 1rem; /* 16px */
-  --espaco-extra-grande: 1.5rem; /* 24px */
-
-  /* Preenchimento/Margem */
-  --preenchimento-extra-grande: 2rem; /* 32px */
-  --margem-extra-grande: 2rem; /* 32px */
-
-  /* Raio */
-  --raio-pequeno: 0.25rem; /* 4px */
-  --raio-medio: 0.5rem; /* 8px */
-  --raio-grande: 1rem; /* 16px */
-
-  /* Sombra */
-  --sombra-suave: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --sombra-elevada: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --sombra-profunda: 0 8px 16px rgba(0, 0, 0, 0.1);
-
-  /* Escala de Grid */
-  --tamanho-coluna-base: 0.5rem; /* 8px */
-  --gutter: 1rem; /* 16px */
-  --coluna-1: calc(var(--tamanho-coluna-base) * 1);
-  --coluna-2: calc(var(--tamanho-coluna-base) * 2 + var(--gutter));
-  --coluna-3: calc(var(--tamanho-coluna-base) * 3 + var(--gutter) * 2);
-  --coluna-4: calc(var(--tamanho-coluna-base) * 4 + var(--gutter) * 3);
-  --coluna-5: calc(var(--tamanho-coluna-base) * 5 + var(--gutter) * 4);
-
-  /* Família Tipográfica */
-  --fonte-padrao: 'Roboto', sans-serif;
-
-  /* Tamanhos e Pesos das Fontes */
-  --xl-fonte-tamanho: 2.5rem; /* 40px */
-  --xl-fonte-peso: 700; /* Negrito */
-  --xl-line-height: 1.2;
-  --xl-letter-spacing: 0.02em;
-
-  --lg-fonte-tamanho: 2rem; /* 32px */
-  --lg-fonte-peso: 700; /* Negrito */
-  --lg-line-height: 1.2;
-  --lg-letter-spacing: 0.02em;
-
-  --md-fonte-tamanho: 1.5rem; /* 24px */
-  --md-fonte-peso: 700; /* Negrito */
-  --md-line-height: 1.2;
-  --md-letter-spacing: 0.01em;
-
-  --sm-fonte-tamanho: 1.125rem; /* 18px */
-  --sm-fonte-peso: 700; /* Negrito */
-  --sm-line-height: 1.2;
-  --sm-letter-spacing: 0.01em;
-
-  --paragrafo-fonte-tamanho: 1rem; /* 16px */
-  --paragrafo-fonte-peso: 400; /* Regular */
-  --paragrafo-line-height: 1.5;
-  --paragrafo-letter-spacing: 0.01em;
-
-  --caption-fonte-tamanho: 0.875rem; /* 14px */
-  --caption-fonte-peso: 400; /* Regular */
-  --caption-line-height: 1.2;
-  --caption-letter-spacing: 0.01em;
-
-  /* Padding e Margin */
-  --padding-elementos: 0.5rem; /* 8px */
-  --margin-elementos: 1rem; /* 16px */
-}
-
 @font-face {
   font-family: 'Roboto-Black';
   src: url('/assets/font/Roboto/Roboto-Black.ttf') format('truetype');
@@ -145,9 +58,35 @@ Esse é um arquivo teste para o estilo do site.
   src: url('/assets/font/Roboto/Roboto-ThinItalic.ttf') format('truetype');
 }
 
+.icon-grande {
+  width: var(--tamanho-icone-grande);
+  height: var(--tamanho-icone-grande);
+}
+
+.icon-medio {
+  width: var(--tamanho-icone-medio);
+  height: var(--tamanho-icone-medio);
+}
+
+.icon-pequeno {
+  width: var(--tamanho-icone-pequeno);
+  height: var(--tamanho-icone-pequeno);
+}
+
+.icon-extra-pequeno {
+  width: var(--tamanho-icone-extra-pequeno);
+  height: var(--tamanho-icone-extra-pequeno);
+}
+
 html {
   font-family: 'Roboto-Regular', sans-serif;
   font-size: var(--paragrafo-fonte-tamanho);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px 12px 24px;
 }
 
 #header {
@@ -156,13 +95,55 @@ html {
   z-index: 999;
   background-color: var(--cor-dominante);
   color: var(--cor-neutra);
+}
 
-  .container {
+.header__top.container {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--espaco-grande);
+
+  font-family: "Roboto-Light", sans-serif;
+  font-size: var(--caption-fonte-tamanho);
+  
+  a {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    width: max-content;
+    gap: var(--espaco-pequeno);
+  }
+
+  a:hover {
+    color: var(--cor-separador);
+  }
+
+  .top__left, .top__right {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--espaco-grande);
+  }
+}
+
+.header__main.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--padding-elementos);
+
+  #menu-hamburger {
+    /* display: flex; */ /* Muda para display flex em telas menores */
+    display: none;
+    flex-grow: 0;
+    align-items: center;
+    
+    button {
+      display: flex;
+      flex-grow: 1;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
   }
 
   #logo {
@@ -171,24 +152,23 @@ html {
     justify-content: center;
   }
 
+  #logo a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+  }
+
   #logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  #logo a {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    overflow: hidden;
-  }
-
   #busca {
     display: flex;
     align-items: center;
-    width: 300px;
-    height: 40px;
+    width: 500px;
     border-radius: 0.25rem;
     background-color: var(--cor-neutra);
     overflow: hidden;
@@ -214,10 +194,16 @@ html {
     margin-right: 0.75rem;
     color: var(--cor-dominante);
   }
-}
 
-.container {
-  max-width: 1400px;
-  padding-left: 24px;
-  padding-right: 24px;
+  #menu {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-extra-grande);
+    margin-left: 15px;
+
+    a {
+      display: flex;
+      flex-grow: 1;
+    }
+  }
 }

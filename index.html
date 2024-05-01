@@ -3,27 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/variables.css">
   <link rel="stylesheet" href="/styles/reset-html.css">
   <link rel="stylesheet" href="/styles/global.css">
   <title>Redesign Americanas</title>
 </head>
 <body>
   <header id="header">
-    <div class="container">
+    <div class="header__top container">
+      <div class="top__left">
+        <a href="#">
+          <span>Nossas Lojas</span>
+        </a>
+        <a href="#">
+          <span>Baixe o App</span>
+        </a>
+        <a href="#">
+          <span>Lojas Oficiais</span>
+        </a>
+        <a href="#">
+          <span>Para sua Empresa</span>
+        </a>
+      </div>
+      <div class="top__right">
+        <a href="#">
+          <span>Entrega Rápida</span>
+        </a>
+        <a href="#">
+          <span>Pix Parcelado</span>
+        </a>
+        <a href="#">
+          <span>Produtos Internacionais</span>
+        </a>
+        <a href="#">
+          <span>Serviços</span>
+        </a>
+        <a href="#">
+          <span>Ajuda</span>
+        </a>
+      </div>
+    </div>
+    <div class="header__main container">
+      <div id="menu-hamburger">
+        <button class="icon-medio" type="button">
+          <img src="/assets/icons/list.svg" alt="menu hamburger">
+        </button>
+      </div>
       <div id="logo">
         <a href="/">
           <img src="/assets/images/logo/svg/logotipo_americanas_v3-05.svg" alt="Logo Americanas">
         </a>
       </div>
+      <div id="endereco">
+        <a href="#">
+          <img class="icon-medio" src="/assets/icons/geo-alt.svg" alt="ícone de endereço">
+          <span>Informe seu <span>CEP</span></span>
+        </a>
+      </div>
       <div id="busca">
         <input type="search" placeholder="Pesquisar">
-        <img src="/assets/icons/search.svg" alt="icone lupa de pesquisa">
+        <img src="/assets/icons/search.svg" alt="ícone lupa de pesquisa">
       </div>
       <div id="menu">
-        <div id="login"></div>
-        <div id="lojas"></div>
-        <div id="favoritos"></div>
-        <div id="carrinhocompras"></div>
+        <a href="#" class="icon-medio">
+          <img src="/assets/icons/person.svg" alt="ícone conta do usuário">
+        </a>
+        <a href="#" class="icon-medio">
+          <img src="/assets/icons/heart.svg" alt="ícone favoritos">
+        </a>
+        <a href="#" class="icon-medio">
+          <img src="/assets/icons/basket2.svg" alt="ícone carrinho de compras">
+        </a>
       </div>
     </div>
   </header>

@@ -48,8 +48,8 @@ h3, h4 {
 }
 
 /* Um elemento que não possui uma classe obtém estilos padrão */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
+a {
+  text-decoration: none;
   color: currentColor;
 }
 
