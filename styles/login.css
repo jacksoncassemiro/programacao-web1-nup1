@@ -1,0 +1,35 @@
+
+main{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* tela de login */
+.tela-login{
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-grande) ;
+    font-size: 15px;
+    width: 300px;
+    margin: auto;
+
+    label:nth-child(1), label:nth-child(2){
+        display:flex;
+        flex-direction:column;
+        gap:var(--espaco-medio);
+
+    }
+}
+
+/* campos de email e senha */
+#email, #senha{
+    padding:0.5rem 0.75rem;
+    border-radius: var(--raio-pequeno);
+    outline-color:var(--cor-secundaria);
+    border: 1px solid var(--cor-texto-destaque);
+    width: 100%;
+}
+
+
+
