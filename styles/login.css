@@ -14,6 +14,9 @@ main{
     width: 300px;
     margin: auto;
 
+    h2, p {
+        text-align: center;
+    }
     label:nth-child(1), label:nth-child(2){
         display:flex;
         flex-direction:column;
@@ -30,6 +33,17 @@ main{
     border: 1px solid var(--cor-texto-destaque);
     width: 100%;
 }
+
+.icon-login{
+    display: flex;
+    gap: var(--espaco-medio);
+    margin: 0 auto;
+}
+
+.icon-medio{
+    filter: invert();
+}
+
 
 
 
