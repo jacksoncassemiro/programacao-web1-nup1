@@ -81,12 +81,57 @@
 html {
   font-family: 'Roboto-Regular', sans-serif;
   font-size: var(--paragrafo-fonte-tamanho);
+  line-height: var(--paragrafo-line-height);
+  letter-spacing: var(--paragrafo-letter-spacing);
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 12px 24px 12px 24px;
+}
+
+.button_primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: var(--espaco-grande);
+  padding: var(--padding-elementos);
+  border: 2px solid var(--cor-dominante);
+  border-radius: var(--raio-pequeno);
+
+  background-color: var(--cor-dominante);
+  color: var(--cor-neutra);
+  font-family: "Roboto-Medium", sans-serif;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--cor-dominante-secundario);
+    border: 2px solid var(--cor-dominante-secundario);
+  }
+}
+
+.button_secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  gap: var(--espaco-grande);
+  padding: var(--padding-elementos);
+  border: 2px solid var(--cor-dominante);
+  border-radius: var(--raio-pequeno);
+
+  background-color: var(--cor-neutra);
+  color: var(--cor-dominante);
+  font-family: "Roboto-Medium", sans-serif;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--cor-separador-extra);
+  }
 }
 
 #header {
@@ -245,9 +290,13 @@ html {
     }
 
     div.account__menu {
+      display: flex; /* Muda para display flex ao clicar no botão */
+      /* display: none; */
+      flex-direction: column;
+      gap: var(--espaco-medio);
       position: absolute;
       width: 100%;
-      top: 40px;
+      top: 150%;
       background-color: var(--cor-neutra);
       padding: var(--espaco-grande);
       border-radius: 0.25rem;
@@ -255,12 +304,26 @@ html {
       border: 1px solid var(--cor-separador-extra);
     }
 
-    a {
+    div.group_account {
+      flex-grow: 1;
+    }
+
+    .group_account:hover, .account__menu:hover {
+      background-color: blue;
+    }
+
+    a, button#account {
       display: flex;
       align-items: center;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: var(--cor-neutra);
       width: max-content;
       gap: var(--espaco-medio);
       font-size: var(--caption-fonte-tamanho);
+      text-align: start;
     }
 
     span {
