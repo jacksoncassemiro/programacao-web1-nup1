@@ -295,7 +295,7 @@ html {
       gap: var(--espaco-medio);
       position: absolute;
       width: 100%;
-      top: 125%;
+      top: 105%;
       background-color: var(--cor-neutra);
       padding: var(--espaco-grande);
       border-radius: 0.25rem;
@@ -317,7 +317,7 @@ html {
       text-align: start;
     }
 
-    .group_account:hover ~ .account__menu, #account:hover ~ .account__menu, .account__menu:hover {
+    #account:hover ~ .account__menu, .account__menu:hover {
       display: flex;
     }
 
