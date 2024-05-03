@@ -180,11 +180,14 @@ body {
   }
 }
 
-.header__main.container {
+.header__main {
   background-color: var(--cor-dominante);
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+.header__main .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
