@@ -191,6 +191,8 @@ html {
     button {
       display: flex;
       flex-grow: 1;
+      align-items: center;
+      justify-content: center;
       background-color: transparent;
       border: none;
       outline: none;
@@ -206,7 +208,7 @@ html {
     a {
       display: inline-block;
       width: max-content;
-      height: 35px;
+      height: 30px;
     }
 
     img {
@@ -285,31 +287,26 @@ html {
     align-items: center;
     gap: var(--espaco-extra-grande);
 
-    > div {
+    div.group_account {
       position: relative;
     }
 
     div.account__menu {
-      display: flex; /* Muda para display flex ao clicar no botão */
-      /* display: none; */
+      display: none;
       flex-direction: column;
       gap: var(--espaco-medio);
       position: absolute;
-      width: 100%;
-      top: 150%;
+      width: max-content;
+      top: 105%;
       background-color: var(--cor-neutra);
       padding: var(--espaco-grande);
       border-radius: 0.25rem;
       box-shadow: var(--sombra-suave);
       border: 1px solid var(--cor-separador-extra);
-    }
 
-    div.group_account {
-      flex-grow: 1;
-    }
-
-    .group_account:hover, .account__menu:hover {
-      background-color: blue;
+      button {
+        width: 150px;
+      }
     }
 
     a, button#account {
@@ -324,6 +321,10 @@ html {
       gap: var(--espaco-medio);
       font-size: var(--caption-fonte-tamanho);
       text-align: start;
+    }
+
+    #account:hover ~ .account__menu, .account__menu:hover {
+      display: flex;
     }
 
     span {
