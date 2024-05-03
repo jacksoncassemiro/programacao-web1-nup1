@@ -352,13 +352,51 @@ body {
 
 .header__categories {
   background-color: var(--cor-neutra);
-  border-bottom: 2px solid var(--cor-neutra);
 
   .container {
     display: flex;
     padding-top: var(--espaco-grande);
     padding-bottom: var(--espaco-grande);
+    overflow: hidden;
+    position: relative;
 
+    button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(243, 243, 243, 0.63);
+      border-radius: 50%;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+
+      img {
+        margin: var(--espaco-medio);
+      }
+
+      &:hover {
+        background-color: rgba(221, 220, 220, 0.856);
+      }
+    }
+
+    button:nth-child(1) {
+      left: 0;
+      bottom: 40%;
+    }
+
+    button:nth-child(2) {
+      right: 0;
+      bottom: 40%;
+    }
+    
+    button:nth-child(2):focus ~ .categories__list {
+      transform: translate(-50%);
+    }
+    
     .categories__list {
       display: flex;
       align-items: baseline;
@@ -366,6 +404,8 @@ body {
       color: var(--cor-texto);
       font-family: "Roboto-Medium", sans-serif;
       font-size: 0.75rem;
+      height: min-content;
+      transition: transform 0.4s ease;
     }
 
     .categories__list a {
@@ -376,13 +416,14 @@ body {
       align-items: center;
       gap: var(--espaco-pequeno);
       cursor: pointer;
-      margin-left: var(--margin-elementos);
-      margin-right: var(--margin-elementos);
+      margin-left: var(--espaco-medio);
+      margin-right: var(--espaco-medio);
       text-align: center;
       width: 72px;
 
       span {
-        width: max-content;
+        width: 80px;
+        line-height: var(--caption-line-height);
       }
 
       img {
@@ -391,7 +432,7 @@ body {
         border-radius: 50%;
         box-shadow: var(--sombra-suave);
         border: 1px solid var(--cor-separador-extra);
-        padding: var(--padding-elementos);
+        padding: var(--espaco-pequeno);
       }
 
       &:hover > img {
