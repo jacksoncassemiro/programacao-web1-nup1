@@ -1,0 +1,86 @@
+@media (max-width: 950px) {
+	.header__top {
+		display: none;
+	}
+
+	button#account span {
+		display: none;
+	}
+}
+
+@media (max-width: 700px) {
+	.container {
+		padding: 12px 18px 12px 18px;
+	}
+
+	.header__main.container {
+		flex-wrap: wrap;
+
+		gap: var(--espaco-grande);
+		padding-top: var(--espaco-grande);
+		padding-bottom: var(--espaco-grande);
+	}
+	.grou_address_search {
+		order: 2;
+		width: 100%;
+		flex-grow: 1;
+	}
+
+	#menu {
+		order: 1;
+	}
+
+	button#account span {
+		display: block;
+	}
+}
+
+@media (max-width: 480px) {
+	.grou_address_search {
+		flex-wrap: wrap;
+	}
+
+  .header__main.container {
+
+    #menu-hamburger {
+      display: flex;
+    }
+
+    #logo {
+      margin-right: auto;
+    }
+
+    #endereco {
+
+      order: 2;
+      flex-grow: 1;
+  
+      button {
+        flex-grow: 1;
+        width: 100%;
+        align-items: center;
+      }
+  
+      button > img {
+        width: var(--tamanho-icone-pequeno);
+        height: var(--tamanho-icone-pequeno);
+      }
+  
+      button > span {
+        flex-direction: row;
+        gap: var(--espaco-pequeno);
+      }
+
+    }
+
+    #busca {
+      order: 1;
+      width: 100%;
+    }
+  
+    button#account span {
+      display: none;
+    }
+
+  }
+}

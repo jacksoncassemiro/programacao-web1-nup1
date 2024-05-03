@@ -191,6 +191,8 @@ html {
     button {
       display: flex;
       flex-grow: 1;
+      align-items: center;
+      justify-content: center;
       background-color: transparent;
       border: none;
       outline: none;
@@ -206,7 +208,7 @@ html {
     a {
       display: inline-block;
       width: max-content;
-      height: 35px;
+      height: 30px;
     }
 
     img {
@@ -328,31 +330,5 @@ html {
         font-family: 'Roboto-Bold', sans-serif;
       }
     }
-  }
-}
-
-@media (max-width: 950px) {
-  .header__top {
-    display: none;
-  }
-
-  button#account span {
-    display: none;
-  }
-}
-
-@media (max-width: 765px) {
-
-  .header__main {
-    flex-wrap: wrap;
-  }
-  .grou_address_search{
-    order: 2;
-    width: 100%;
-    flex-grow: 1;
-  }
-
-  #menu {
-    order: 1;
   }
 }
