@@ -3,6 +3,14 @@
 		display: none;
 	}
 
+  #menu {
+
+    div.account__menu {
+      right: -100%;
+    }
+
+  }
+
 	button#account span {
 		display: none;
 	}
@@ -28,6 +36,10 @@
 
 	#menu {
 		order: 1;
+
+    div.account__menu {
+      right: 0;
+    }
 	}
 
 	button#account span {
@@ -76,6 +88,13 @@
     #busca {
       order: 1;
       width: 100%;
+    }
+
+    #menu {
+      
+      div.account__menu {
+        right: -100%;
+      }
     }
   
     button#account span {

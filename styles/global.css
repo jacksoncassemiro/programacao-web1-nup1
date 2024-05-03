@@ -287,7 +287,7 @@ html {
     align-items: center;
     gap: var(--espaco-extra-grande);
 
-    > div {
+    div.group_account {
       position: relative;
     }
 
@@ -296,13 +296,17 @@ html {
       flex-direction: column;
       gap: var(--espaco-medio);
       position: absolute;
-      width: 100%;
+      width: max-content;
       top: 105%;
       background-color: var(--cor-neutra);
       padding: var(--espaco-grande);
       border-radius: 0.25rem;
       box-shadow: var(--sombra-suave);
       border: 1px solid var(--cor-separador-extra);
+
+      button {
+        width: 150px;
+      }
     }
 
     a, button#account {
