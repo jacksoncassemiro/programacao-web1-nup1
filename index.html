@@ -1,22 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/variables.css">
   <link rel="stylesheet" href="/styles/reset-html.css">
   <link rel="stylesheet" href="/styles/global.css">
+  <link rel="stylesheet" href="/styles/mediaquerys.css">
   <title>Redesign Americanas</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <h2>Lista da equipe:</h2>
-  <ul>
-    <li>Antônio</li>
-    <li>Jackson</li>
-    <li>João</li>
-    <li>Jonatha</li>
-    <li>Jadiel</li>
-    <li>Pedro</li>
-  </ul>
+  <header id="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="top__left">
+          <a href="#">
+            <span>Nossas Lojas</span>
+          </a>
+          <a href="#">
+            <span>Baixe o App</span>
+          </a>
+          <a href="#">
+            <span>Lojas Oficiais</span>
+          </a>
+          <a href="#">
+            <span>Para sua Empresa</span>
+          </a>
+        </div>
+        <div class="top__right">
+          <a href="#">
+            <span>Entrega Rápida</span>
+          </a>
+          <a href="#">
+            <span>Pix Parcelado</span>
+          </a>
+          <a href="#">
+            <span>Produtos Internacionais</span>
+          </a>
+          <a href="#">
+            <span>Serviços</span>
+          </a>
+          <a href="#">
+            <span>Ajuda</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__main container">
+      <div id="menu-hamburger">
+        <button class="icon-grande" type="button">
+          <img src="/assets/icons/list.svg" alt="menu hamburger">
+        </button>
+      </div>
+      <div id="logo">
+        <a href="#">
+          <img src="/assets/images/logo/svg/logo-primary-branco.svg" alt="Logo Americanas">
+        </a>
+      </div>
+      <div class="grou_address_search">
+        <div id="endereco">
+          <button type="button">
+            <img class="icon-medio" src="/assets/icons/geo-alt.svg" alt="ícone de endereço">
+            <span>Informe seu <span>CEP</span></span>
+          </button>
+        </div>
+        <div id="busca">
+          <input type="search" placeholder="Pesquisar">
+          <img src="/assets/icons/search.svg" alt="ícone lupa de pesquisa">
+        </div>
+      </div>
+      <div id="menu">
+        <div class="group_account">
+          <button type="button" id="account">
+            <img class="icon-medio" src="/assets/icons/person.svg" alt="ícone conta do usuário">
+            <span>Bem vindo :&rpar;<br><span>Entre ou cadastre-se</span></span>
+          </button>
+          <div class="account__menu">
+            <button type="submit" class="button_primary">Entrar</button>
+            <button type="button" class="button_secondary">Cadastrar</button>
+          </div>
+        </div>
+        <a title="Favoritos" href="#">
+          <img class="icon-medio" src="/assets/icons/heart.svg" alt="ícone favoritos">
+        </a>
+        <a title="Carrinho de compras" href="#">
+          <img class="icon-medio" src="/assets/icons/basket2.svg" alt="ícone carrinho de compras">
+        </a>
+      </div>
+    </div>
+  </header>
 </body>
 </html>
