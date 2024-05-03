@@ -85,6 +85,7 @@ Esse é um arquivo teste para o estilo do site.
   --margin-elementos: 1rem; /* 16px */
 
   /* Tamanhos de ícones */
+  --tamanho-icone-extra-grande: 40px; /* equivalente a 2rem */
   --tamanho-icone-grande: 32px; /* equivalente a 2rem */
   --tamanho-icone-medio: 24px; /* equivalente a 1.5rem */
   --tamanho-icone-pequeno: 16px; /* equivalente a 1rem */
