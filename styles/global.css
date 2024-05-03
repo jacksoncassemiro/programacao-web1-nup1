@@ -85,6 +85,10 @@ html {
   letter-spacing: var(--paragrafo-letter-spacing);
 }
 
+body {
+  background-color: var(--cor-separador-extra);
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -139,6 +143,7 @@ html {
   top: 0;
   z-index: 999;
   background-color: var(--cor-dominante);
+  border: none;
   color: var(--cor-neutra);
 }
 
@@ -333,6 +338,24 @@ html {
       * {
         font-family: 'Roboto-Bold', sans-serif;
       }
+    }
+  }
+}
+
+.header__categories {
+  background-color: var(--cor-neutra);
+  border-bottom: 2px solid var(--cor-neutra);
+
+  .container {
+    display: flex;
+
+    .categories__list {
+      display: flex;
+      align-items: center;
+      gap: var(--espaco-grande);
+      color: var(--cor-texto);
+      font-family: "Roboto-Medium", sans-serif;
+      font-size: var(--caption-fonte-tamanho);
     }
   }
 }
