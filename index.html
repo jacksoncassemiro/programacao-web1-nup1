@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -11,10 +12,13 @@
   <link rel="stylesheet" href="/styles/reset-html.css">
   <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/mediaquerys.css">
-  <title>Redesign Americanas</title>
+  <link rel="stylesheet" href="/styles/index.css">
+  <title>Página inicial</title>
 </head>
+
 <body>
   <header id="header">
+    <input id="menu-hamburger" title="menu header" placeholder="menu header" type="checkbox" hidden="true" value="false">
     <div class="header__top">
       <div class="container">
         <div class="top__left">
@@ -50,48 +54,279 @@
         </div>
       </div>
     </div>
-    <div class="header__main container">
-      <div id="menu-hamburger">
-        <button class="icon-grande" type="button">
-          <img src="/assets/icons/list.svg" alt="menu hamburger">
-        </button>
-      </div>
-      <div id="logo">
-        <a href="#">
-          <img src="/assets/images/logo/svg/logo-primary-branco.svg" alt="Logo Americanas">
-        </a>
-      </div>
-      <div class="grou_address_search">
-        <div id="endereco">
-          <button type="button">
-            <img class="icon-medio" src="/assets/icons/geo-alt.svg" alt="ícone de endereço">
-            <span>Informe seu <span>CEP</span></span>
-          </button>
+    <div class="header__main">
+      <div class="container">
+        <div class="menu-hamburger">
+          <label for="menu-hamburger" class="icon-grande" type="button">
+            <img src="/assets/icons/list.svg" alt="menu hamburger">
+          </label>
         </div>
-        <div id="busca">
-          <input type="search" placeholder="Pesquisar">
-          <img src="/assets/icons/search.svg" alt="ícone lupa de pesquisa">
+        <div id="logo">
+          <a href="#">
+            <img src="/assets/images/logo/svg/logo-primary-branco.svg" alt="Logo Americanas">
+          </a>
         </div>
-      </div>
-      <div id="menu">
-        <div class="group_account">
-          <button type="button" id="account">
-            <img class="icon-medio" src="/assets/icons/person.svg" alt="ícone conta do usuário">
-            <span>Bem vindo :&rpar;<br><span>Entre ou cadastre-se</span></span>
-          </button>
-          <div class="account__menu">
-            <button type="submit" class="button_primary">Entrar</button>
-            <button type="button" class="button_secondary">Cadastrar</button>
+        <div class="grou_address_search">
+          <div id="endereco">
+            <button type="button">
+              <img class="icon-medio" src="/assets/icons/geo-alt.svg" alt="ícone de endereço">
+              <span>Informe seu <span>CEP</span></span>
+            </button>
+          </div>
+          <div id="busca">
+            <input type="search" placeholder="Pesquisar">
+            <img src="/assets/icons/search.svg" alt="ícone lupa de pesquisa">
           </div>
         </div>
-        <a title="Favoritos" href="#">
-          <img class="icon-medio" src="/assets/icons/heart.svg" alt="ícone favoritos">
-        </a>
-        <a title="Carrinho de compras" href="#">
-          <img class="icon-medio" src="/assets/icons/basket2.svg" alt="ícone carrinho de compras">
-        </a>
+        <div id="menu">
+          <div class="group_account">
+            <button type="button" id="account">
+              <img class="icon-medio" src="/assets/icons/person.svg" alt="ícone conta do usuário">
+              <span>Bem vindo :&rpar;<br><span>Entre ou cadastre-se</span></span>
+            </button>
+            <div class="account__menu">
+              <button type="submit" class="button_primary">Entrar</button>
+              <button type="button" class="button_secondary">Cadastrar</button>
+            </div>
+          </div>
+          <a title="Favoritos" href="#">
+            <img class="icon-medio" src="/assets/icons/heart.svg" alt="ícone favoritos">
+          </a>
+          <a title="Carrinho de compras" href="#">
+            <img class="icon-medio" src="/assets/icons/basket2.svg" alt="ícone carrinho de compras">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header__categories">
+      <div class="container">
+        <label for="menu-hamburger">
+          <img class="icon-pequeno" src="/assets/icons/x-lg.svg" alt="seta de retorno">
+        </label>
+        <div class="container__account">
+          <div class="icon_account">
+            <img class="icon-extra-grande" src="/assets/icons/person-primary.svg" alt="ícone da conta">
+          </div>
+          <div class="account__text">
+            <span>Entre ou cadastre-se</span>
+            <span>Tenha tudo em um só lugar</span>
+          </div>
+        </div>
+        <div class="container__menu">
+          <button type="submit" class="button_primary">Entrar</button>
+          <button type="button" class="button_secondary">Cadastrar</button>
+        </div>
+        <button type="button" class="previes">
+          <img class="icon-medio" src="/assets/icons/chevron-left.svg" alt="seta de retorno">
+        </button>
+        <button type="button" class="next">
+          <img class="icon-medio" src="/assets/icons/chevron-right.svg" alt="seta de retorno">
+        </button>
+        <div class="categories__list">
+          <a href="#">
+            <img src="/assets/images/category/TELEFONIA.png" alt="imagem telefonia">
+            <span>telefonia</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/eletrodomesticos.png" alt="imagem eletrodomésticos">
+            <span>eletrodomésticos</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/CASA-ELETROPORTATEIS.png" alt="imagem eletroportáteis">
+            <span>eletroportáteis</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/automotivo.png" alt="imagem automotivo">
+            <span>automotivo</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/informatica-acessorios.png" alt="imagem acessórios de informática">
+            <span>acessórios de informática</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/UD.png" alt="imagem utilidades domésticas">
+            <span>utilidades domésticas</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/CASA-CLIMATIZACAO.png" alt="imagem climatização">
+            <span>climatização</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/MOVEIS.png" alt="imagem móveis">
+            <span>móveis</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/suplementos-vitaminas.png" alt="imagem suplementos">
+            <span>suplementos</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/BRINQUEDOS.png" alt="imagem brinquedos">
+            <span>brinquedos</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/TV.png" alt="imagem áudio e vídeo">
+            <span>áudio e vídeo</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/NOTEBOOKS.png" alt="imagem notebooks">
+            <span>notebooks</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/cabelos.png" alt="imagem cabelos">
+            <span>cabelos</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/cama-mesa-banho.png" alt="imagem cama, mesa e banho">
+            <span>cama, mesa e banho</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/bebidas.png" alt="imagem bebidas">
+            <span>bebidas</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/papelaria.png" alt="imagem papelaria">
+            <span>papelaria</span>
+          </a>
+          <a href="#">
+            <img src="/assets/images/category/CASA-LIVROS.png" alt="imagem livros">
+            <span>livros</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
+  <main id="main"></main>
+  <footer id="footer">
+    <input title="menu footer" placeholder="menu footer" id="menu_footer" type="checkbox" hidden="true" value="false">
+    <div class="footer_top">
+      <div class="container">
+        <a href="#">sac 4003 4848</a>
+        <a href="#">guia de segurança</a>
+        <a href="#">dia das mães</a>
+        <a href="#">ame digital</a>
+        <a href="#">produtos internacionais</a>
+        <a href="#">americanas empresas</a>
+        <a href="#">americanas advertising</a>
+        <a href="#">entregas e devoluções</a>
+      </div>
+    </div>
+    <div class="footer_main">
+      <div class="container">
+        <div class="group_footer_main">
+          <div class="links">
+            <div class="institutional">
+              <h2>institucional</h2>
+              <div class="links_categorys">
+                <a href="#">comunicado aos clientes</a>
+                <a href="#">investidores americanas sa</a>
+                <a href="#">governança corporativa</a>
+                <a href="#">lojas americanas</a>
+                <a href="#">programa de afiliados</a>
+                <a href="#">prêmios</a>
+                <a href="#">assessoria de imprensa</a>
+                <a href="#">venda na americanas</a>
+                <a href="#">trabalhe conosco</a>
+                <a href="#">cadastro de proteção à propriedade intelectual</a>
+                <a href="#">nossas lojas</a>
+                <a href="#">canal de denúncias</a>
+              </div>
+            </div>
+            <div class="questions">
+              <h2>dúvidas</h2>
+              <div class="links_categorys">
+                <a href="#">central de atendimento</a>
+                <a href="#">trocas e devoluções</a>
+                <a href="#">direito de arrependimento</a>
+                <a href="#">processo de entrega</a>
+                <a href="#">politica de privacidade</a>
+                <a href="#">regras do site</a>
+                <a href="#">guia de segurança</a>
+                <a href="#">termos e condições de compra e venda de produtos</a>
+                <a href="#">procon-rj</a>
+                <a href="#">cupom de desconto</a>
+                <a href="#">marketplace</a>
+                <a href="#">black friday</a>
+              </div>
+            </div>
+            <div class="services">
+              <h2>serviços</h2>
+              <div class="links_categorys">
+                <a href="#">tipos de entrega</a>
+                <a href="#">seguro roubo e furto</a>
+                <a href="#">serviços de entrega - direct</a>
+                <a href="#">instalação de ar condicionado</a>
+                <a href="#">garantia estendida</a>
+                <a href="#">vale presente</a>
+                <a href="#">para empresas</a>
+                <a href="#">confira todos</a>
+              </div>
+            </div>
+            <div class="love_digital">
+              <h2>ame digital</h2>
+              <div class="links_categorys">
+                <a href="#">amedigital.com</a>
+                <a href="#">cartão de crédito ame</a>
+                <a href="#">ame fazer sua parte</a>
+                <a href="#">carnê digital</a>
+                <a href="#">veja as ofertas</a>
+              </div>
+            </div>
+          </div>
+          <div class="others">
+            <div class="informatios">
+              <p><span>Formas de pagamento:</span> cartões de crédito Ame, Mastercard, Visa, Elo, American Express, Aura, Diners Club, Hipercard; boleto bancário; Ame Digital; Pix.</p>
+              <p>Todas as regras e promoções são válidas apenas para produtos vendidos e entregues pela Americanas. O preço válido será o da finalização da compra. Havendo divergência, prevalecerá o menor preço ofertado.</p>
+            </div>
+            <img src="/assets/images/selo-2018.bmp" alt="imagem de selo americanas">
+          </div>
+        </div>
+      </div>
+      <div class="menu_footer">
+        <label class="menu_footer__button" for="menu_footer">
+          <span>informações adicionais</span>
+          <img class="button_down" src="/assets/icons/chevron-down.svg" alt="ícone para expandir informações">
+          <img class="button_up" src="/assets/icons/chevron-up.svg" alt="ícone para recolher informações">
+        </label>
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div class="container">
+        <div class="footer__group_bottom">
+          <div class="logo">
+            <img src="/assets/images/logo/svg/logo-primary-vermelho.svg" alt="Logo Americanas">
+            <span>passou, cestou.</span>
+          </div>
+          <div class="acessebility">
+            <a href="#">
+              <img class="icon-medio" src="/assets/icons/universal-access.svg" alt="ícone de tradutor para libras">
+              <span>tradutor para Libras</span>
+            </a>
+            <a href="#">
+              <span>acessibilidade digital na Americanas</span>
+            </a>
+          </div>
+          <div class="social">
+            <a href="https://www.youtube.com/CanalAmericanas" title="Canal Americanas">
+              <img src="/assets/icons/youtube.svg" alt="ícone do YouTube">
+            </a>
+            <a href="https://www.facebook.com/americanas" title="Facebook Americanas">
+              <img src="/assets/icons/facebook.svg" alt="ícone do Facebook">
+            </a>
+            <a href="https://www.instagram.com/americanas" title="Instagram Americanas">
+              <img src="/assets/icons/instagram.svg" alt="ícone do Instagram">
+            </a>
+            <a href="https://twitter.com/americanas" title="X-Twitter Americanas">
+              <img src="/assets/icons/twitter-x.svg" alt="ícone do X-Twitter">
+            </a>
+            <a href="https://www.tiktok.com/@americanas" title="Tiktok Americanas">
+              <img src="/assets/icons/tiktok.svg" alt="ícone do Tiktok">
+            </a>
+          </div>
+        </div>
+        <span>americanas s.a. / CNPJ: 00.776.574/0006-60 / Inscrição Estadual: 85.687.08-5 / Endereço Rua Sacadura Cabral, 102 - Rio de Janeiro, RJ - 20081-902 / fale com a gente</span>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
