@@ -430,13 +430,16 @@ body {
       width: 72px;
 
       span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 80px;
         line-height: var(--caption-line-height);
       }
 
       img {
-        width: 72px;
-        height: 72px;
+        width: 64px;
+        height: 64px;
         border-radius: 50%;
         box-shadow: var(--sombra-suave);
         border: 1px solid var(--cor-separador-extra);
