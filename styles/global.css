@@ -484,15 +484,90 @@ body {
 .footer_bottom {
   background-color: var(--cor-separador-extra);
   color: var(--cor-texto-neutra);
+  padding-top: var(--espaco-grande);
+  padding-bottom: var(--espaco-grande);
 
-  
-
-  span {
+  .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    gap: var(--espaco-grande);
+
+    > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: var(--caption-line-height);
+      font-size: var(--caption-fonte-tamanho);
+      text-align: center;
+    }
+  }
+
+  .group_bottom {
+    display: flex;
     align-items: center;
-    line-height: var(--caption-line-height);
-    font-size: var(--caption-fonte-tamanho);
-    text-align: center;
+    gap: var(--espaco-grande);
+
+    .logo, .acessebility, .social {
+      display: flex;
+      gap: var(--espaco-medio);
+      align-items: center;
+    }
+
+    .logo {
+      margin-right: auto;
+      height: 30px;
+      width: max-content;
+
+      img {
+        height: 30px;
+        width: max-content;
+      }
+    }
+
+    .acessebility{
+      gap: var(--espaco-grande);
+      
+      a {
+        display: flex;
+        justify-content: justify-content;
+        align-items: center;
+        gap: var(--espaco-medio);
+        width: 150px;
+        padding: var(--espaco-pequeno) var(--espaco-medio);
+        line-height: var(--caption-line-height);
+
+        &:first-child {
+          border: 2px solid var(--cor-texto-neutra);
+          border-radius: var(--raio-pequeno);
+
+          & span {
+            align-self: flex-start;
+            font-family: "Roboto-Medium", sans-serif;
+            width: 100%;
+          }
+        }
+
+        &:last-child {
+          width: 180px;
+          text-decoration-line: underline;
+        }
+      }
+    }
+
+    .social {
+      gap: var(--espaco-grande);
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+      }
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
   }
 }
