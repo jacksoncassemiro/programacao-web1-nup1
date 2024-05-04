@@ -15,6 +15,7 @@
 </head>
 <body>
   <header id="header">
+    <input id="menu-hamburger" type="checkbox" hidden="true" value="false">
     <div class="header__top">
       <div class="container">
         <div class="top__left">
@@ -52,10 +53,10 @@
     </div>
     <div class="header__main">
       <div class="container">
-        <div id="menu-hamburger">
-          <button class="icon-grande" type="button">
+        <div class="menu-hamburger">
+          <label for="menu-hamburger" class="icon-grande" type="button">
             <img src="/assets/icons/list.svg" alt="menu hamburger">
-          </button>
+          </label>
         </div>
         <div id="logo">
           <a href="#">
@@ -96,6 +97,22 @@
     </div>
     <div class="header__categories">
       <div class="container">
+        <label for="menu-hamburger">
+          <img class="icon-pequeno" src="/assets/icons/x-lg.svg" alt="seta de retorno">
+        </label>
+        <div class="container__account">
+          <div class="icon_account">
+            <img class="icon-extra-grande" src="/assets/icons/person-primary.svg" alt="ícone da conta">
+          </div>
+          <div class="account__text">
+            <span>Entre ou cadastre-se</span>
+            <span>Tenha tudo em um só lugar</span>
+          </div>
+        </div>
+        <div class="container__menu">
+          <button type="submit" class="button_primary">Entrar</button>
+          <button type="button" class="button_secondary">Cadastrar</button>
+        </div>
         <button type="button" class="previes">
           <img class="icon-medio" src="/assets/icons/chevron-left.svg" alt="seta de retorno">
         </button>
