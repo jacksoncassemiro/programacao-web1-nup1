@@ -533,7 +533,9 @@ body {
   .links {
     display: flex;
     justify-content: space-between;
-    gap: var(--espaco-grande);
+    row-gap: 2.5rem;
+    column-gap: var(--espaco-grande);
+    flex-wrap: wrap;
     border-top: 1px solid var(--cor-separador);
     border-bottom: 1px solid var(--cor-separador);
     padding-top: 2rem;
@@ -544,7 +546,7 @@ body {
       flex-direction: column;
       gap: var(--espaco-grande);
       font-size: var(--paragrafo-fonte-tamanho);
-      width: 20%;
+      width: 250px;
 
       h2 {
         font-size: var(--sm-fonte-tamanho);
@@ -561,7 +563,7 @@ body {
   .others {
     display: flex;
     align-items: center;
-    gap: var(--espaco-grande);
+    gap: var(--espaco-extra-grande);
     font-size: var(--caption-fonte-tamanho);
 
     .informatios {
@@ -630,10 +632,11 @@ body {
     }
   }
 
-  .group_bottom {
+  .footer__group_bottom {
     display: flex;
     align-items: center;
     gap: var(--espaco-grande);
+    flex-wrap: wrap;
 
     .logo, .acessebility, .social {
       display: flex;
