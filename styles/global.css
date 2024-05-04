@@ -499,14 +499,21 @@ body {
 }
 
 .footer_main {
+  position: relative;
   
   .container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--espaco-extra-grande);
+    margin-top: 0;
+  }
+
+  .group_footer_main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--espaco-extra-grande);
-    position: relative;
-    margin-top: 0;
   }
 
   .links {
@@ -532,7 +539,7 @@ body {
       .links_categorys {
         display: flex;
         flex-direction: column;
-        gap: var(--espaco-medio);
+        gap: var(--espaco-grande);
       }
     }
   }
@@ -562,7 +569,7 @@ body {
 
   .menu_footer {
     position: absolute;
-    bottom: -50px;
+    bottom: -25px;
     left: 0;
     right: 0;
 
@@ -582,6 +589,10 @@ body {
       font-size: var(--caption-fonte-tamanho);
       background-color: var(--cor-neutra);
       border-radius: var(--raio-pequeno);
+
+      img:last-child {
+        display: none;
+      }
     }
   }
 }
