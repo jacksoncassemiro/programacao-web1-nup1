@@ -468,15 +468,17 @@ body {
 #footer {
   display: flex;
   flex-direction: column;
-  gap: var(--espaco-grande);
 
   background-color: var(--cor-neutra);
   color: var(--cor-texto-neutra);
 }
 
 .footer_top, .footer_main, .footer_bottom {
-  padding-top: var(--espaco-grande);
-  padding-bottom: var(--espaco-grande);
+  
+  .container {
+    margin-top: var(--espaco-extra-grande);
+    margin-bottom: var(--espaco-extra-grande);
+  }
 }
 
 .footer_top {
@@ -487,7 +489,7 @@ body {
     display: flex;
     align-items: baseline;
     gap: var(--espaco-grande);
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     a {
       display: flex;
@@ -498,6 +500,72 @@ body {
 
 .footer_main {
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-extra-grande);
+    position: relative;
+    margin-top: 0;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-grande);
+    border-top: 1px solid var(--cor-separador);
+    border-bottom: 1px solid var(--cor-separador);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .institutional, .questions, .services, .love_digital {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espaco-grande);
+      font-size: var(--paragrafo-fonte-tamanho);
+      width: 20%;
+
+      h2 {
+        font-size: var(--sm-fonte-tamanho);
+      }
+
+      .links_categorys {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+      }
+    }
+  }
+
+  .others {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-grande);
+    font-size: var(--caption-fonte-tamanho);
+
+    .informatios {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--espaco-medio);
+    }
+
+    span {
+      font-family: "Roboto-Medium", sans-serif;
+    }
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .menu_footer {
+    position: absolute;
+    bottom: -20px;
+
+    display: flex;
+    gap: var(--espaco-medio);
+  }
 }
 
 .footer_bottom {
