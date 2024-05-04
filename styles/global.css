@@ -503,6 +503,7 @@ body {
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--espaco-extra-grande);
     position: relative;
     margin-top: 0;
@@ -561,10 +562,27 @@ body {
 
   .menu_footer {
     position: absolute;
-    bottom: -20px;
+    bottom: -50px;
+    left: 0;
+    right: 0;
 
     display: flex;
-    gap: var(--espaco-medio);
+    flex-grow: 1;
+    justify-content: center;
+
+    .menu_footer__button {
+      display: flex;
+      gap: var(--espaco-medio);
+      flex-grow: 0;
+
+      width: max-content;
+      cursor: pointer;
+      padding: var(--espaco-medio) var(--espaco-grande);
+
+      font-size: var(--caption-fonte-tamanho);
+      background-color: var(--cor-neutra);
+      border-radius: var(--raio-pequeno);
+    }
   }
 }
 
