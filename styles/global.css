@@ -689,3 +689,7 @@ body {
   color: var(--cor-dominante);
   text-decoration: underline;
 }
+
+#menu_footer:checked ~ .footer_main .container {
+  display: flex;
+}
