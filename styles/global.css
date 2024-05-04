@@ -488,12 +488,26 @@ body {
   .container {
     display: flex;
     align-items: baseline;
-    gap: var(--espaco-grande);
     justify-content: space-between;
+    gap: var(--espaco-grande);
+    flex-wrap: wrap;
 
     a {
       display: flex;
-      width: 100px;
+      width: 130px;
+    }
+
+    @media (max-width: 1200px) {
+      a {
+        width: 220px;
+      }
+    }
+
+    @media (max-width: 975px) {
+      gap: var(--espaco-medio);
+      a {
+        width: 220px;
+      }
     }
   }
 }
