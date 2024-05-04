@@ -693,3 +693,11 @@ body {
 #menu_footer:checked ~ .footer_main .container {
   display: flex;
 }
+
+#menu_footer:checked ~ .footer_main .button_down {
+  display:none;
+}
+
+#menu_footer:checked ~ .footer_main .button_up {
+  display: inherit;
+}
