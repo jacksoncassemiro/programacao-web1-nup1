@@ -1,0 +1,46 @@
+.carousel {
+  position: relative;
+
+  .button_banner:nth-child(1) {
+    position: absolute;
+  }
+
+  .button_banner:nth-child(2) {
+    position: absolute;
+  }
+
+  .button_banner:nth-child(3) {
+    position: absolute;
+  }
+
+  .button_banner:nth-child(4) {
+    position: absolute;
+  }
+
+  .button_banner:nth-child(5) {
+    position: absolute;
+  }
+
+  .banners {
+
+    .banner:nth-child(1) {
+      
+    }
+
+    .banner:nth-child(2) {
+      width: 0;
+    }
+
+    .banner:nth-child(3) {
+      width: 0;
+    }
+
+    .banner:nth-child(4) {
+      width: 0;
+    }
+
+    .banner:nth-child(5) {
+      width: 0;
+    }
+  }
+}

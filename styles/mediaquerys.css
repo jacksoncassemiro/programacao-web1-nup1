@@ -256,6 +256,18 @@
   }
 
   #footer {
+
+    .footer_top {
+
+      .container {
+        justify-content: center;
+
+        a {
+          justify-content: center;
+        }
+      }
+    }
+
     .footer_main {
 
       .institutional, .questions, .services, .love_digital {
