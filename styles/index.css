@@ -1,30 +1,62 @@
+@keyframes carousel {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: auto;
+  }
+}
+
+@keyframes select_banner {
+  100% {
+    background-color: var(--cor-dominante-secundario);
+  }
+}
+
 .carousel {
   position: relative;
 
-  .button_banner:nth-child(1) {
+  
+  .button_banner {
     position: absolute;
+    bottom: 20px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid var(--cor-neutra);
+    background-color: var(--cor-neutra);
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.863);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--cor-dominante-secundario);
+    }
+  }
+  
+  .button_banner:nth-child(1) {
+    left: calc(50% - 68px);
   }
 
   .button_banner:nth-child(2) {
-    position: absolute;
+    left: calc(50% - 38px);
   }
 
   .button_banner:nth-child(3) {
-    position: absolute;
+    left: calc(50% - 8px);
   }
 
   .button_banner:nth-child(4) {
-    position: absolute;
+    left: calc(50% + 22px);
   }
 
   .button_banner:nth-child(5) {
-    position: absolute;
+    left: calc(50% + 52px);
   }
 
   .banners {
 
     .banner:nth-child(1) {
-      
+      /* width: 0; */
     }
 
     .banner:nth-child(2) {
