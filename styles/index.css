@@ -120,17 +120,83 @@
     }
   }
 
-  /* &:hover .button_banner, &:hover .banner {
+  &:hover .button_banner, &:hover .banner {
     animation-play-state: paused;
     animation-name: none;
+  }
 
-    &:hover {
-      animation-name: select_banner;
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-timing-function: linear;
+  .button_banner:hover ~ .banners .banner {
+    display: none;
+  }
+
+  .button_banner:nth-of-type(1):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(1) {
+      animation-name: carousel;
+      animation-duration: 1s;
       animation-delay: 0s;
     }
-  } */
+
+  }
+
+  .button_banner:nth-of-type(2):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(2) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(3):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(3) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(4):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(4) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(5):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(5) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
 
 }
