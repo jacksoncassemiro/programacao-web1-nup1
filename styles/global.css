@@ -178,10 +178,6 @@ button.next {
   bottom: 40%;
 }
 
-button.next:focus ~ .categories__list {
-  transform: translate(-30%);
-}
-
 #header {
   border: none;
   color: var(--cor-neutra);
@@ -221,9 +217,6 @@ button.next:focus ~ .categories__list {
 
 .header__main {
   background-color: var(--cor-dominante);
-  /* position: sticky;
-  top: 0;
-  z-index: 999; */
 }
 
 .header__main .container {
@@ -398,6 +391,10 @@ button.next:focus ~ .categories__list {
     padding-bottom: var(--espaco-grande);
     overflow: hidden;
     position: relative;
+
+    button.next:focus ~ .categories__list {
+      transform: translate(-30%);
+    }
 
     .container__menu, label, .container__account {
       display: none;
@@ -725,7 +722,7 @@ button.next:focus ~ .categories__list {
   gap: var(--espaco-grande);
   padding: var(--espaco-grande);
 
-  width: 200px;
+  min-width: 200px;
   background-color: var(--cor-neutra);
   border: 2px solid var(--cor-separador-extra);
   color: var(--cor-texto);
@@ -742,6 +739,7 @@ button.next:focus ~ .categories__list {
       aspect-ratio: 1/1;
       object-fit: contain;
       object-position: center;
+      border-radius: var(--raio-pequeno);
     }
 
     figcaption {
