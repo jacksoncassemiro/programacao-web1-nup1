@@ -730,7 +730,7 @@ button.next:focus ~ .categories__list {
   border: 2px solid var(--cor-separador-extra);
   color: var(--cor-texto);
   border-radius: var(--raio-medio);
-  box-shadow: var(--sombra-elevada);
+  box-shadow: var(--sombra-suave);
   cursor: pointer;
 
   figure {
