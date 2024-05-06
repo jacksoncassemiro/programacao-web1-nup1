@@ -218,18 +218,17 @@ section {
     display: flex;
     gap: var(--espaco-grande);
     transition: transform 0.4s ease;
-  
   }
   
-  button.previes {
+  &#products button.previes {
     bottom: 40%;
   }
   
-  button.next {
+  &#products button.next {
     bottom: 40%;
   }
 
-  button.next:focus ~ .products {
+  &#products button.next:focus ~ .products, &#services button.next:focus ~ .services, &#sponsored button.next:focus ~ .products {
     transform: translate(-40%);
   }
 
@@ -298,5 +297,33 @@ section {
     a:nth-child(11) {
       grid-area: of_11;
     }
+  }
+
+  .services {
+    display: flex;
+    gap: var(--espaco-grande);
+    transition: transform 0.4s ease;
+
+    a:hover {
+      transform: scale(1.02);
+    }
+
+    a {
+      transition: transform 0.4s ease;
+      aspect-ratio: 4/5;
+      min-width: 200px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &#services button.previes {
+    bottom: 35%;
+  }
+  
+  &#services button.next {
+    bottom: 35%;
   }
 }
