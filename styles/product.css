@@ -1,4 +1,11 @@
 
+h2{
+    margin-top: 10px;
+}
+a{
+    text-decoration: underline;
+}
+
 .geral{
     display: flex;
     flex-direction: column;
@@ -7,6 +14,12 @@
     background-color: white;
     border-radius: 20px;
     max-width: 1250px;
+}
+
+.nome-produto{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
 }
 
 .tela-produto {
@@ -70,13 +83,48 @@
     
 }
 
-.preco{
+.recursos{
+  display: flex;  
+}
+
+.acoes{
+    display: flex;
+    gap: var(--espaco-medio);
+    margin-left:auto;
+    margin-right: 20px;
+}
+
+.estrela{
+    display: flex;
+    gap: var(--espaco-pequeno);
+}
+.elementos-preco{
     display: flex;
     flex-direction: column;
     gap: var(--espaco-extra-grande);
 }
+
+.preco{
+    display: flex;
+    flex-direction: column;
+}
+
+#complemento{
+    margin-top: auto;
+}
+
+.valor-principal{
+    display: flex;
+    gap: var(--espaco-pequeno);
+}
  .seguro{
     display: flex;
+    gap: var(--espaco-pequeno);
+ }
+
+ #selecao{
+    height: 20px;
+    width: 20px;
  }
 
 .compra{
