@@ -102,6 +102,19 @@
     }
   }
 
+  #main {
+    .offers {
+      grid-template-areas: 
+      "of_1 of_1 of_2 of_2"
+      "of_3 of_3 of_4 of_4"
+      "of_5 of_5 of_6 of_6"
+      "of_7 of_7 of_8 of_8"
+      "of_9 of_9 of_9 of_9"
+      "of_10 of_10 of_10 of_10"
+      "of_11 of_11 of_11 of_11";
+    }
+  }
+
   #footer {
 
     .others {
@@ -252,6 +265,24 @@
           }
         }
       }
+    }
+  }
+
+  #main {
+    .offers {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "of_1"
+      "of_2"
+      "of_3"
+      "of_4"
+      "of_5"
+      "of_6"
+      "of_7"
+      "of_8"
+      "of_9"
+      "of_10"
+      "of_11";
     }
   }
 
