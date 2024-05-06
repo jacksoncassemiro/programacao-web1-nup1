@@ -112,6 +112,10 @@
       "of_9 of_9 of_9 of_9"
       "of_10 of_10 of_10 of_10"
       "of_11 of_11 of_11 of_11";
+  
+      a:nth-child(11) {
+        display: none;
+      }
     }
   }
 
@@ -269,6 +273,24 @@
   }
 
   #main {
+
+    .carousel {
+      display: none;
+    }
+
+    #plus {
+      order: 1;
+      margin-bottom: auto;
+    }
+
+    #products {
+      order: 2;
+    }
+
+    #offers {
+      order: 3;
+    }
+
     .offers {
       grid-template-columns: 1fr;
       grid-template-areas: 
@@ -283,6 +305,19 @@
       "of_9"
       "of_10"
       "of_11";
+  
+      a:nth-child(9), a:nth-child(10) {
+        display: none;
+      }
+    }
+
+    #services {
+      order: 4;
+    }
+
+    #sponsored {
+      order: 5;
+      margin-bottom: var(--espaco-extra-grande);
     }
   }
 
