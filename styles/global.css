@@ -350,12 +350,12 @@ button.next {
       border: 1px solid var(--cor-separador-extra);
       z-index: 3;
 
-      button {
+      a {
         width: 150px;
       }
     }
 
-    a, button#account {
+    #menu a, button#account {
       display: flex;
       align-items: center;
       background-color: transparent;

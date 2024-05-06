@@ -228,7 +228,7 @@ section {
     bottom: 40%;
   }
 
-  &#products button.next:focus ~ .products, &#services button.next:focus ~ .services, &#sponsored button.next:focus ~ .products {
+  &#products button.next:focus ~ .products, &#services button.next:focus ~ .services, &#sponsored button.next:focus ~ .products, &#plus button.next:focus ~ .plus {
     transform: translate(-40%);
   }
 
@@ -325,5 +325,34 @@ section {
   
   &#services button.next {
     bottom: 35%;
+  }
+
+  .plus {
+    display: flex;
+    gap: var(--espaco-grande);
+    transition: transform 0.4s ease;
+    margin-bottom: var(--espaco-extra-grande);
+
+    a:hover {
+      transform: scale(1.04);
+    }
+
+    a {
+      transition: transform 0.4s ease;
+      aspect-ratio: 1/1;
+      min-width: 52px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &#plus button.previes {
+    bottom: 28%;
+  }
+  
+  &#plus button.next {
+    bottom: 28%;
   }
 }
