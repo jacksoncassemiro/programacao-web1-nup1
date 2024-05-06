@@ -11,32 +11,72 @@
   <link rel="stylesheet" href="/styles/reset-html.css">
   <link rel="stylesheet" href="/styles/global.css">
   <link rel="stylesheet" href="/styles/mediaquerys.css">
+  <link rel="stylesheet" href="/styles/product.css">
   <title>Redesign Americanas</title>
 </head>
 <body>
     <header></header>
     <main>
-        <h1>Smartphone Moto G54 128GB 5G Wi-Fi Tela 6.5'' Dual Chip 4GB RAM Câmera 50 MP OIS + 2MP - Grafite</h1>
-        <a href="#info">Informações do produto</a>
-        <div class tela-preco>
-            <p>Quantidade:<strong> 2 unidades</strong></p>
-            <p>Vendido e entregue por TESTE</p>
-            <h2>R$ 999,00</h2>
-            <p>até 6x de R$ 166,50</p>
-            <button>Cartão de Crédito</button>
-            <div class="compra">
-                <button class="button_primary">Comprar Agora</button>
-                <button calss="button_primary">Adicionar à Sacola</button>
+        <div class="geral">
+            <h1>Smartphone Moto G54 128GB 5G Wi-Fi Tela 6.5'' Dual Chip 4GB RAM Câmera 50 MP OIS + 2MP - Grafite</h1>
+            <a href="#info">Informações do produto</a>
+            <div class="tela-produto">
+                <div class="images-all">
+                    <div class="select-image">
+                        <img src="/assets/images/product/image-product1.png" alt="">
+                    </div>
+                    <div class="images">
+                        <div class="image">
+                            <img src="/assets/images/product/image-product1.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="/assets/images/product/image-product2.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="/assets/images/product/image-product3.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="/assets/images/product/image-product4.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="/assets/images/product/image-product5.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="/assets/images/product/image-product6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tela-preco">
+                    <div class="preco">
+                        <p>Quantidade:<strong> 2 unidades</strong></p>
+                        <p>Vendido e entregue por TESTE</p>
+                        <h2>R$ 999,00</h2>
+                        <p>até 6x de R$ 166,50</p>
+                        <div class="seguro">
+                            <label for="seguro">
+                                <input type="checkbox">
+                            </label>
+                            <p>1 ano de seguro roubo e furto qualificado + quebra acidental em até 6x de R$ 45,79 s/ juros.</p>
+                        </div>
+                    </div>
+                    <div class="compra">
+                        <button class="button_primary">Comprar Agora</button>
+                        <button class="button_primary">Adicionar à Sacola</button>
+                    </div>
+                    <form>
+                        <p>Calcule o frete mais próximo</p>
+                        <div class="cep">
+                            <div>
+                                <input type="number" placeholder="Digite seu CEP" id="frete">
+                            </div>
+                            <div>
+                                <button class="button_secondary" id="ok">OK</button>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
             </div>
-            <br>
-            <label for="frete">Calcule seu frete a prazo
-                <input type="number" placeholder="Digite seu CEP">
-            </label>
-            <button class="button_secundary">OK</button>
-            <h2 id = info>Informações dos produtos</h2>
-
-
-        </div>
+        </div>    
     </main>
     <footer></footer>
 </body>
