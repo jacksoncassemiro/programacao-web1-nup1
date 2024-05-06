@@ -830,3 +830,7 @@ button.next {
     border-radius: var(--raio-pequeno);
   }
 }
+
+.product:hover {
+  border-color: var(--cor-dominante);
+}
