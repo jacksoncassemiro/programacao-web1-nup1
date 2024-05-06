@@ -224,6 +224,6 @@ section {
   }
 
   button.next:focus ~ .products {
-    transform: translate(-30%);
+    transform: translate(-40%);
   }
 }

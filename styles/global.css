@@ -427,6 +427,7 @@ button.next {
       margin-right: var(--espaco-medio);
       text-align: center;
       width: 72px;
+      scroll-snap-type: x proximity;
 
       span {
         display: flex;
@@ -729,6 +730,7 @@ button.next {
   border-radius: var(--raio-medio);
   box-shadow: var(--sombra-suave);
   cursor: pointer;
+  scroll-snap-type: x proximity;
 
   figure {
     display: flex;
