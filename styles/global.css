@@ -380,7 +380,7 @@ input[type="checkbox"]:not([hidden="true"]) {
       }
     }
 
-    #menu a, button#account {
+    & > a, button#account {
       display: flex;
       align-items: center;
       background-color: transparent;
