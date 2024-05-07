@@ -1,11 +1,14 @@
-
+/* Titulo produto */
 h2{
     margin-top: 10px;
 }
+
+/* Avaliar e informações do produto */
 a{
     text-decoration: underline;
 }
 
+/* Todas as informações da tela do produto até a parte do preço e fotos */
 .geral{
     display: flex;
     flex-direction: column;
@@ -16,12 +19,14 @@ a{
     max-width: 1250px;
 }
 
+/* Engloba o nome do produto e as informações */
 .nome-produto{
     display: flex;
     flex-direction: column;
     margin-left: 20px;
 }
 
+/* Tem todas as informações presentes de imagens preços e botoes*/
 .tela-produto {
     display: flex;
     justify-content: center;
@@ -29,12 +34,14 @@ a{
   
 }
 
+/* Tem todas as imagens reunidas */
 .images-all {
     display: flex;
     flex-direction: row;
     max-width: 900px;
 }
 
+/* Imagem principal maior da tela */
 .select-image {
     order: 2;
     margin-left: 100px;
@@ -43,11 +50,13 @@ a{
     max-width: 800px;
 }
 
+/* Ajuste na imagem principal */
 .select-image img{
     height: 100%;
     width: 100%;
 }
 
+/* Todas as miniaturas */
 .images {
     display: flex;
     flex-direction: column;
@@ -56,22 +65,29 @@ a{
     max-height: 600px;
     max-width: 800px;
 }
+
+/* Classe que todas as miniaturas pertencem */
 .image{
     height: 100%;
     width: 100%;
     margin-left: 20px;
 }
+
+
+/* Ajuste nas imagens em miniatura */
 .image img {
     border: 1px solid rgba(60, 58, 58, 0.5);
+    border-radius: 8px;
     max-width: 75px;
     max-height: 75px;
 }
 
+/* Ajuste para efeito ao passar o mouse nas miniaturas */
 .image img:hover {
     border-color: black;
 }
 
-
+/* Todas as informações referente ao preço e ao elementos de botões e etc */
 .tela-preco{
     display: flex;
     flex-direction: column;
@@ -83,10 +99,12 @@ a{
     
 }
 
+/* Todos os icones de estrelas e compartilhar e o avaliar produto */
 .recursos{
   display: flex;  
 }
 
+/* Icones de compartilhar e favoritar */
 .acoes{
     display: flex;
     gap: var(--espaco-medio);
@@ -94,39 +112,51 @@ a{
     margin-right: 20px;
 }
 
-.estrela{
+
+/* Todos os icones de estrelas e a opção avaliar produtos */
+.estrelas{
     display: flex;
     gap: var(--espaco-pequeno);
 }
+
+/* Legendas e informações que tem haver com o preço */
 .elementos-preco{
     display: flex;
     flex-direction: column;
     gap: var(--espaco-extra-grande);
 }
 
+/* Todas as informações de preço */
 .preco{
     display: flex;
     flex-direction: column;
 }
 
+/* Informação que fica do lado do valor principal(o maior) */
 #complemento{
     margin-top: auto;
 }
 
+/* Maior valor na tela com o preço */
 .valor-principal{
     display: flex;
     gap: var(--espaco-pequeno);
 }
+
+/* Informações de seguro e opção de marcar o checkbox */
  .seguro{
     display: flex;
     gap: var(--espaco-pequeno);
  }
 
+
+ /* Id do checkbox */
  #selecao{
     height: 20px;
     width: 20px;
  }
 
+ /* Os dois botões de Comprar Agora e Adicionar à sacola */
 .compra{
     display: flex;
     flex-direction: column;
@@ -134,10 +164,12 @@ a{
 
 }
 
+/* Campo de cep ,legenda e botão de OK */
 .cep{
     display: flex;
 }
 
+/* Id da caixa de digitar o frete */
 #frete{
     padding: 1rem;
     border-radius: var(--raio-pequeno);
@@ -146,9 +178,110 @@ a{
     width: 100%;
 }
 
+/* id do botão OK ao lado do Cep */
 #ok{
     padding: 1rem;
     margin-left: var(--espaco-medio);
 
 }
 
+/* Todas as informações sobre as descrições */
+.info{
+    color: rgb(102, 102, 102);
+    font-size: 21px;
+}
+
+/* Caixas de cada campo de informação */
+.accordion{
+    border: 1px solid color(#fafafa);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1250px;
+    background-color: var(--cor-neutra);
+    transition: background-color 0.25s;
+    will-change: background-color;
+
+    &:first-child {
+        margin-top: 24px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    &:hover {
+         background-color: #fafafa;
+    }
+}
+
+
+/* Titulo contendo o icone */
+.title{
+    list-style: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 16px;
+    position: relative; 
+
+    img {
+        position: absolute;
+        right: 16px;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+} 
+
+/* Classe da caixa que está dentro do título */
+.description{
+    border-top: 1px solid rgb(210, 210, 210);
+    font-size: 14px;
+    line-height: 30px;
+    padding: 16px; 
+}
+
+.description p {
+    margin-bottom: 10px;
+}
+
+/* Tabela ficha técnica */
+.tabela{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabela td{
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    padding: 6px;
+    text-align: left;
+}
+
+.tabela tr:nth-child(odd){
+    background-color: rgb(242, 242, 242);
+    font-size: var(--caption-fonte-tamanho);
+
+}
+.tabela tr:nth-child(even){
+    background-color: var(--cor-neutra);
+    font-size: var(--caption-fonte-tamanho);
+}
+
+/* Campo avaliacoes */
+.avaliacoes{
+    display: flex;
+    gap: var(--espaco-extra-grande);
+}
+
+.comentario-titulo{
+   display: flex;
+   background-color: var(--cor-separador);
+}
+
+#avaliar-produto{
+    display: flex;
+    padding: 12px 50px;
+
+}
