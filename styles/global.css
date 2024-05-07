@@ -462,6 +462,8 @@ button.next {
   flex-direction: column;
   flex-grow: 1;
   gap: var(--espaco-grande);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #footer {

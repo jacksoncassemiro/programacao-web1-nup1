@@ -1,0 +1,11 @@
+.main__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  h2 {
+    width: 100%;
+    font-size: var(--lg-fonte-tamanho);
+    flex-grow: 1;
+  }
+}
