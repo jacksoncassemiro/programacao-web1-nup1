@@ -149,10 +149,12 @@
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: var(--cor-separador-extra);
-        overflow-y: auto;
+        overflow-y: scroll;
         z-index: 999;
 
         padding: var(--espaco-grande);
@@ -165,6 +167,19 @@
 
           position: fixed;
           bottom: 0;
+        }
+
+        .filters__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          gap: var(--espaco-medio);
+          padding: var(--espaco-medio) var(--espaco-medio) var(--espaco-medio) 0;
+
+          .button_close {
+            cursor: pointer;
+          }
         }
       }
     }
