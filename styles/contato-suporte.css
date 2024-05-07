@@ -1,0 +1,11 @@
+#links_primarys, #search, #categorys_questions, #fags, #contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-grande);
+  width: 100%;
+
+  h2 {
+    width: 100%;
+    font-size: var(--lg-fonte-tamanho);
+  }
+}
