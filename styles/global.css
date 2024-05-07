@@ -727,6 +727,9 @@ button.next {
   padding: var(--espaco-grande);
 
   min-width: 200px;
+  min-height: 481px;
+  width: 200px;
+  height: 481px;
   background-color: var(--cor-neutra);
   border: 2px solid var(--cor-separador-extra);
   color: var(--cor-texto);
