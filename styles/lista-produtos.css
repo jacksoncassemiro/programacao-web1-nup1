@@ -12,7 +12,7 @@ h3 {
 }
 
 label {
-  font-size: var(--paragrafo-fonte-tamanho);
+  font-size: 0.9rem;
 }
 
 .main__header {
@@ -57,23 +57,35 @@ label {
         width: 100%;
         cursor: pointer;
 
+        &:hover {
+          color: var(--cor-dominante);
+          text-decoration-line: underline;
+        }
+
         input {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        input::after {
-          content: "";
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 15px;
-          min-height: 15px;
+          appearance: none;
+          width: 18px;
+          height: 18px;
           border: 1px solid var(--cor-texto);
-          background-color: var(--cor-neutra);
           border-radius: var(--raio-pequeno);
+          outline: none;
           cursor: pointer;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:checked {
+            background-color: var(--cor-dominante);
+            border-color: var(--cor-dominante);
+
+            &:after {
+              content: "\2714";
+              color: var(--cor-neutra);
+            }
+          }
         }
+        
       }
     }
   }

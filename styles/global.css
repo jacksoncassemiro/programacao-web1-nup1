@@ -768,16 +768,6 @@ button.next {
     display: flex;
     gap: var(--espaco-medio);
 
-    .stars {
-      display: flex;
-      gap: var(--espaco-pequeno);
-
-      img {
-        width: 16px;
-        height: 16px;
-      }
-    }
-
     strong {
       font-size: 0.75rem;
     }
@@ -837,6 +827,16 @@ button.next {
     width: max-content;
     padding: var(--espaco-pequeno) var(--espaco-medio);
     border-radius: var(--raio-pequeno);
+  }
+}
+
+.stars {
+  display: flex;
+  gap: var(--espaco-pequeno);
+
+  img {
+    width: 16px;
+    height: 16px;
   }
 }
 
