@@ -61,30 +61,6 @@ label {
           color: var(--cor-dominante);
           text-decoration-line: underline;
         }
-
-        input {
-          appearance: none;
-          width: 18px;
-          height: 18px;
-          border: 1px solid var(--cor-texto);
-          border-radius: var(--raio-pequeno);
-          outline: none;
-          cursor: pointer;
-
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          &:checked {
-            background-color: var(--cor-dominante);
-            border-color: var(--cor-dominante);
-
-            &:after {
-              content: "\2714";
-              color: var(--cor-neutra);
-            }
-          }
-        }
         
       }
     }
