@@ -92,6 +92,7 @@ html {
 
 body {
   background-color: var(--cor-separador-extra);
+  color: var(--cor-texto);
   display: flex;
   flex-direction: column;
 }
