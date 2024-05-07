@@ -89,6 +89,10 @@ label {
       }
     }
 
+    .filters__header {
+      display: none;
+    }
+
     .button_menu_filter {
       display: none;
     }
@@ -120,7 +124,7 @@ label {
           border: 2px solid var(--cor-neutra);
           background-color: var(--cor-neutra);
           border-radius: var(--raio-pequeno);
-          padding: var(--espaco-medio);
+          padding: 0.5rem var(--espaco-medio);
           box-shadow: var(--sombra-suave);
           
           outline: none;
