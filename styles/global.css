@@ -368,6 +368,8 @@ button.next {
       gap: var(--espaco-medio);
       font-size: var(--caption-fonte-tamanho);
       text-align: start;
+      min-width: 24px;
+      min-height: 24px;
     }
 
     #account:hover ~ .account__menu, .account__menu:hover {
@@ -727,10 +729,9 @@ button.next {
   gap: var(--espaco-grande);
   padding: var(--espaco-grande);
 
+  aspect-ratio: 2/4;
   min-width: 200px;
-  min-height: 481px;
   width: 200px;
-  height: 481px;
   background-color: var(--cor-neutra);
   border: 2px solid var(--cor-separador-extra);
   color: var(--cor-texto);
