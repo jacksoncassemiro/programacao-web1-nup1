@@ -25,7 +25,7 @@ label {
 #main__products {
   
   display: flex;
-  gap: var(--espaco-extra-grande);
+  gap: var(--espaco-grande);
   width: 100%;
 
   .filters {
