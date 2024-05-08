@@ -24,8 +24,9 @@
 #links_primarys {
   .links__content {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: var(--espaco-extra-grande);
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    width: 100%;
 
     .link_item {
       display: flex;
@@ -89,21 +90,18 @@
   }
 
   .search__categorys {
-    display: flex;
+    display: grid;
     gap: var(--espaco-medio);
-    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    width: 100%;
 
     a {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      flex-grow: 1;
       align-items: center;
       gap: var(--espaco-grande);
-      min-width: 155px;
-      width: 165px;
       height: 120px;
-      aspect-ratio: 2/1;
       border-radius: var(--raio-pequeno);
       text-align: center;
 
