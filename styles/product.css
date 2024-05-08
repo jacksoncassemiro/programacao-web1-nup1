@@ -1,97 +1,88 @@
-/* Titulo produto */
-h2 {
-	margin-top: 10px;
-}
-
-/* Avaliar e informações do produto */
-a {
-	&:hover {
-		color: var(--cor-dominante);
-	}
-}
-
-p {
-	color: var(--cor-texto);
-}
-
-hr {
-	margin-bottom: 30px;
-	border-color: rgb(210, 210, 210);
-}
-
-span {
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
 /* Todas as informações da tela do produto até a parte do preço e fotos */
 .geral {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-extra-grande);
+  padding: var(--espaco-extra-grande);
 	background-color: var(--cor-neutra);
 	border-radius: var(--raio-medio);
+  color: var(--cor-texto);
+
+  /* Avaliar e informações do produto */
+  a {
+    &:hover {
+      color: var(--cor-dominante);
+      text-decoration-line: underline;
+    }
+  }
+
+  hr {
+    margin-bottom: 30px;
+    border-color: var(--cor-separador-extra);
+  }
 
 	/* Engloba o nome do produto e as informações */
 	.nome-produto {
 		display: flex;
 		flex-direction: column;
+    gap: var(--espaco-pequeno);
+    flex-grow: 1;
+
+    h2 {
+      text-wrap:wrap;
+    }
 	}
 
 	/* Tem todas as informações presentes de imagens preços e botoes*/
 	.tela-produto {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
+    gap: var(--espaco-medio);
     
     /* Tem todas as imagens reunidas */
     .images-all {
       display: flex;
-      flex-direction: row;
-      max-width: 900px;
-    }
-    
-    /* Imagem principal maior da tela */
-    .select-image {
-      order: 2;
-      margin-left: 100px;
-      margin-right: 100px;
-      max-height: 600px;
-      max-width: 800px;
-    }
-    
-    /* Ajuste na imagem principal */
-    .select-image img {
-      height: 100%;
       width: 100%;
-    }
-    
-    /* Todas as miniaturas */
-    .images {
-      display: flex;
-      flex-direction: column;
-      order: 1;
-      gap: var(--espaco-pequeno);
-      max-height: 600px;
-      max-width: 800px;
-    }
-    
-    /* Classe que todas as miniaturas pertencem */
-    .image {
-      height: 100%;
-      width: 100%;
-      margin-left: var(--espaco-extra-grande);
-    }
-    
-    /* Ajuste nas imagens em miniatura */
-    .image img {
-      border: 1px solid rgba(60, 58, 58, 0.5);
-      border-radius: 8px;
-      max-width: 75px;
-      max-height: 75px;
-    }
-    
-    /* Ajuste para efeito ao passar o mouse nas miniaturas */
-    .image img:hover {
-      border-color: black;
+      
+      /* Todas as miniaturas */
+      .images {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-pequeno);
+        max-height: 600px;
+        max-width: 800px;
+      }
+      
+      /* Classe que todas as miniaturas pertencem */
+      .image {
+        height: 100%;
+        width: 100%;
+        margin-left: var(--espaco-extra-grande);
+      }
+      
+      /* Ajuste nas imagens em miniatura */
+      .image img {
+        border: 1px solid rgba(60, 58, 58, 0.5);
+        border-radius: 8px;
+        max-width: 75px;
+        max-height: 75px;
+      }
+      
+      /* Ajuste para efeito ao passar o mouse nas miniaturas */
+      .image img:hover {
+        border-color: black;
+      }
+
+      /* Imagem principal maior da tela */
+      .select-image {
+        
+      }
+      
+      /* Ajuste na imagem principal */
+      .select-image img {
+        
+      }
+      
     }
     /* Todas as informações referente ao preço e ao elementos de botões e etc */
     .tela-preco {
@@ -216,29 +207,31 @@ span {
       border: 1px solid var(--cor-texto-destaque);
       width: 100%;
     }
+    /* id do botão OK ao lado do Cep */
+    #ok {
+      padding: 1rem;
+      margin-left: var(--espaco-medio);
+    }
 	}
 }
 
 
-/* id do botão OK ao lado do Cep */
-#ok {
-	padding: 1rem;
-	margin-left: var(--espaco-medio);
-}
-
 /* Todas as informações sobre as descrições */
 .info {
-	color: rgb(102, 102, 102);
-	font-size: 21px;
-
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-medio);
+  width: 100%;
+  
 	/* Caixas de cada campo de informação */
 	.accordion {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 		border: 1px solid color(#fafafa);
 		border-radius: 10px;
 		box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 1250px;
 		background-color: var(--cor-neutra);
 		transition: background-color 0.25s;
 		will-change: background-color;
@@ -257,6 +250,7 @@ span {
     
     /* Titulo contendo o icone */
     .title {
+      width: 100%;
       list-style: none;
       cursor: pointer;
       font-weight: 600;
