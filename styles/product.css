@@ -1,154 +1,488 @@
+/* Todas as informações da tela do produto até a parte do preço e fotos */
+.geral {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-grande);
+  padding: var(--espaco-extra-grande);
+	background-color: var(--cor-neutra);
+	border-radius: var(--raio-medio);
+  color: var(--cor-texto);
 
-h2{
-    margin-top: 10px;
-}
-a{
-    text-decoration: underline;
-}
+  /* Avaliar e informações do produto */
+  a {
+    &:hover {
+      color: var(--cor-dominante);
+      text-decoration-line: underline;
+    }
+  }
 
-.geral{
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    border-radius: 20px;
-    max-width: 1250px;
-}
+  hr {
+    margin-bottom: 30px;
+    border-color: var(--cor-separador-extra);
+  }
 
-.nome-produto{
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.tela-produto {
-    display: flex;
-    justify-content: center;
-
-  
-}
-
-.images-all {
-    display: flex;
-    flex-direction: row;
-    max-width: 900px;
-}
-
-.select-image {
-    order: 2;
-    margin-left: 100px;
-    margin-right: 100px;
-    max-height: 600px;
-    max-width: 800px;
-}
-
-.select-image img{
-    height: 100%;
-    width: 100%;
-}
-
-.images {
-    display: flex;
-    flex-direction: column;
-    order: 1;
+	/* Engloba o nome do produto e as informações */
+	.nome-produto {
+		display: flex;
+		flex-direction: column;
     gap: var(--espaco-pequeno);
-    max-height: 600px;
-    max-width: 800px;
-}
-.image{
-    height: 100%;
+    flex-grow: 1;
+
+    h2 {
+      text-wrap:wrap;
+    }
+	}
+
+	/* Tem todas as informações presentes de imagens preços e botoes*/
+	.tela-produto {
     width: 100%;
-    margin-left: 20px;
-}
-.image img {
-    border: 1px solid rgba(60, 58, 58, 0.5);
-    max-width: 75px;
-    max-height: 75px;
-}
-
-.image img:hover {
-    border-color: black;
-}
-
-
-.tela-preco{
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-extra-grande);
-    max-width: 500px;
-    max-height: 580px;
-    height: 100%;
-    width: 100%;
+		display: grid;
+    gap: var(--espaco-grande);
+    grid-template-columns: 1fr 1fr;
     
+    /* Tem todas as imagens reunidas */
+    .images-all {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      /* Todas as miniaturas */
+      .images {
+        display: flex;
+        gap: var(--espaco-medio);
+        
+        /* Classe que todas as miniaturas pertencem */
+        .image {
+          aspect-ratio: 1/1;
+          flex-grow: 1;
+          padding: var(--espaco-pequeno);
+          border: 2px solid var(--cor-separador-extra);
+          border-radius: var(--raio-pequeno);
+          cursor: pointer;
+
+          &:hover {
+            border-color: var(--cor-dominante);
+          }
+        }
+      }
+    }
+
+    /* Todas as informações referente ao preço e ao elementos de botões e etc */
+    .tela-preco {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espaco-extra-grande);
+      
+      /* Todos os icones de estrelas e compartilhar e o avaliar produto */
+      .recursos {
+        display: flex;
+        gap: var(--espaco-medio);
+        justify-content: space-between;
+        align-items: center;
+        
+        /* estrelas com a opção de avaliar */
+        #avaliar-estrelas {
+          display: flex;
+          gap: var(--espaco-medio);
+          align-items: center;
+          font-size: var(--paragrafo-fonte-tamanho);
+          
+          /* Todos os icones de estrelas  */
+          .estrelas {
+            display: flex;
+            gap: var(--espaco-pequeno);
+            
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          
+        }
+        
+        /* Icones de compartilhar e favoritar */
+        .acoes {
+          display: flex;
+          gap: var(--espaco-grande);
+          
+          img {
+            width: var(--tamanho-icone-medio);
+            height: var(--tamanho-icone-medio);
+            cursor: pointer;
+          }
+        }
+      }
+      
+      /* Legendas e informações que tem haver com o preço */
+      .elementos-preco {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-grande);
+        
+        .venda-entrega {
+          display: flex;
+          gap: var(--espaco-medio);
+          
+          #logo-americanas {
+            width: 100px;
+          }
+        }
+        
+        /* Todas as informações de preço */
+        .preco {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-pequeno);
+          
+          .preco-original, .valor-principal {
+            font-size: var(--paragrafo-fonte-tamanho);
+          }
+
+          .preco-original {
+            display: flex;
+            flex-direction: row;
+            gap: var(--espaco-grande);
+            align-items: center;
+            
+            /* Espaço com o desconto do produto */
+            span:last-child {
+              font-family: "Roboto-Bold", sans-serif;
+              background-color: #07aa07;
+              color: var(--cor-neutra);
+              padding: var(--espaco-pequeno);
+              border-radius: var(--raio-pequeno);
+              font-size: 0.7rem;
+            }
+          }
+
+          .valor-desconto {
+            display: flex;
+            flex-direction: column;
+            line-height: var(--caption-line-height);
+            margin-top: var(--espaco-grande);
+            
+            strong:first-child {
+              font-size: var(--lg-fonte-tamanho);
+            }
+          }
+        }
+        
+        /* Informações de seguro e opção de marcar o checkbox */
+        .seguro {
+          display: flex;
+          gap: var(--espaco-grande);
+          align-items: center;
+          cursor: pointer;
+          line-height: var(--paragrafo-line-height);
+          font-size: var(--paragrafo-fonte-tamanho);
+
+          input {
+            min-width: 20px;
+            min-height: 20px;
+          }
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      /* Os dois botões de Comprar Agora e Adicionar à sacola */
+      .compra {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+
+        button {
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+        }
+      }
+
+      .frete {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+
+        /* Campo de cep ,legenda e botão de OK */
+        .cep {
+          display: flex;
+          
+          /* Id da caixa de digitar o frete */
+          #frete {
+            padding: var(--espaco-pequeno) var(--espaco-grande);
+            border-radius: var(--raio-pequeno);
+            outline-color: var(--cor-dominante);
+            border: 2px solid var(--cor-separador-extra);
+            width: 100%;
+            font-size: var(--caption-fonte-tamanho);
+          }
+          /* id do botão OK ao lado do Cep */
+          #consultar {
+            padding: 1rem;
+            margin-left: var(--espaco-medio);
+          }
+        }
+      }
+    }
+    
+	}
 }
 
-.recursos{
-  display: flex;  
-}
-
-.acoes{
-    display: flex;
-    gap: var(--espaco-medio);
-    margin-left:auto;
-    margin-right: 20px;
-}
-
-.estrela{
-    display: flex;
-    gap: var(--espaco-pequeno);
-}
-.elementos-preco{
+/* Todas as informações sobre as descrições */
+.info {
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-grande);
+  width: 100%;
+  
+	/* Caixas de cada campo de informação */
+	.accordion {
     display: flex;
     flex-direction: column;
-    gap: var(--espaco-extra-grande);
+    flex-grow: 1;
+		border: 2px solid var(--cor-separador-extra);
+		border-radius: 10px;
+		box-shadow: var(--sombra-suave);
+		background-color: var(--cor-neutra);
+
+		&:hover {
+			border: 2px solid var(--cor-dominante);
+		}
+    
+    /* Titulo contendo o icone */
+    .title {
+      list-style: none;
+      overflow: hidden;
+      width: 100%;
+      padding: var(--espaco-grande);
+      cursor: pointer;
+      font-family: "Roboto-Medium", sans-serif;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--espaco-grande);
+  
+      input:checked ~ .title img {
+        transform: rotate(180deg);
+      }
+    }
+    
+    /* Classe da caixa que está dentro do título */
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espaco-grande);
+      font-size: var(--caption-fonte-tamanho);
+      line-height: var(--paragrafo-line-height);
+      padding: var(--espaco-grande);
+      
+      /* Tabela ficha técnica */
+      .tabela {
+        border-collapse: collapse;
+        width: 100%;
+        
+        td {
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          padding: 6px;
+          text-align: left;
+        }
+        
+        tr:nth-child(odd) {
+          background-color: rgb(242, 242, 242);
+          font-size: var(--caption-fonte-tamanho);
+        }
+
+        tr:nth-child(even) {
+          background-color: var(--cor-neutra);
+          font-size: var(--caption-fonte-tamanho);
+        }
+      }
+      
+      /* Campo  com todas as informações das avaliacoes */
+      .avaliacoes {
+        display: flex;
+        gap: var(--espaco-grande);
+        flex-wrap: wrap;
+        
+        /* Contem as informações do botão e das notas nas estrelas */
+        .avaliar {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-grande);
+
+          button {
+            flex-grow: 0;
+          }
+          
+          /* Informações da nota em estrelas e numero e quantidade de avaliações */
+          .nota {
+            border: 2px solid var(--cor-separador);
+            border-radius: var(--raio-pequeno);
+            
+            /* Id do nome: nota */
+            #nome-nota {
+              padding: var(--espaco-medio);
+              border-bottom: 2px solid var(--cor-separador);
+              background-color: rgb(210, 210, 210);
+            }
+            
+            /* id do valor da nota que o aplicativo tem */
+            .nota-info {
+              padding: var(--espaco-medio);
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              gap: var(--espaco-medio);
+
+              hr {
+                width: 100%;
+                color: var(--cor-separador-extra);
+              }
+
+              .valor-estrelas, .quantidade-avaliacoes {
+                display: flex;
+                align-items: center;
+                padding: var(--espaco-medio);
+                gap: var(--espaco-pequeno);
+
+                span {
+                  font-family: "Roboto-Bold", sans-serif;
+                  font-size: var(--lg-fonte-tamanho);
+                }
+
+                .estrelas {
+                  display: flex;
+                  gap: var(--espaco-pequeno);
+
+                  img {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          .filter {
+            padding: var(--espaco-medio);
+            border: 2px solid var(--cor-separador);
+            border-radius: var(--raio-pequeno);
+
+            display: flex;
+            gap: var(--espaco-medio);
+            flex-direction: column;
+
+            span {
+              margin-bottom: var(--espaco-pequeno);
+              font-size: var(--paragrafo-fonte-tamanho);
+              font-family: "Roboto-Medium", sans-serif;
+            }
+
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: var(--espaco-medio);
+              padding: var(--espaco-pequeno);
+              background-color: transparent;
+              border: 2px solid var(--cor-separador);
+              border-radius: var(--raio-pequeno);
+              font-family: "Roboto-Medium", sans-serif;
+              color: var(--cor-texto-neutra);
+              cursor: pointer;
+              width: 100%;
+
+              .value_star {
+                display: flex;
+                align-items: center !important;
+                font-size: var(--caption-fonte-tamanho);
+              }
+            }
+          }
+        }
+
+        .comentarios {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-grande);
+          border: 2px solid var(--cor-separador);
+          border-radius: var(--raio-pequeno);
+          flex-grow: 1;
+
+          .comentario-titulo {
+            padding: var(--espaco-grande) var(--espaco-medio);
+            background-color: var(--cor-separador);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+              span {
+                font-family: "Roboto-Medium", sans-serif;
+                color: var(--cor-dominante);
+              }
+
+              select {
+                border: none;
+                background-color: transparent;
+                font-family: "Roboto-Medium", sans-serif;
+                padding: var(--espaco-pequeno);
+                outline-color: var(--cor-dominante);
+              }
+            }
+          }
+
+          .comentario {
+            display: flex;
+            flex-direction: column;
+            gap: var(--espaco-medio);
+            padding: var(--espaco-grande);
+
+            .comment {
+              display: flex;
+              flex-direction: column;
+              gap: var(--espaco-grande);
+              border: 2px solid var(--cor-separador);
+              border-radius: var(--raio-pequeno);
+              padding: var(--espaco-grande);
+
+              .comment_header, .comment_content {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: var(--espaco-medio);
+                flex-direction: column;
+                width: 100%;
+              }
+
+              .comment_footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--espaco-medio);
+
+                .buttons {
+                  display: flex;
+                  gap: var(--espaco-medio);
+                  align-items: center;
+
+                  img {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+	}
 }
-
-.preco{
-    display: flex;
-    flex-direction: column;
-}
-
-#complemento{
-    margin-top: auto;
-}
-
-.valor-principal{
-    display: flex;
-    gap: var(--espaco-pequeno);
-}
- .seguro{
-    display: flex;
-    gap: var(--espaco-pequeno);
- }
-
- #selecao{
-    height: 20px;
-    width: 20px;
- }
-
-.compra{
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-medio);
-
-}
-
-.cep{
-    display: flex;
-}
-
-#frete{
-    padding: 1rem;
-    border-radius: var(--raio-pequeno);
-    outline-color:var(--cor-secundaria);
-    border: 1px solid var(--cor-texto-destaque);
-    width: 100%;
-}
-
-#ok{
-    padding: 1rem;
-    margin-left: var(--espaco-medio);
-
-}
-

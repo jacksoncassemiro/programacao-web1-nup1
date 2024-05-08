@@ -188,6 +188,32 @@
         }
       }
     }
+
+    .geral {
+    
+      /* Tem todas as informações presentes de imagens preços e botoes*/
+      .tela-produto {
+        grid-template-columns: 1fr;
+        
+      }
+    }
+    
+    /* Todas as informações sobre as descrições */
+    .info {
+
+      /* Caixas de cada campo de informação */
+      .accordion {
+        
+        /* Classe da caixa que está dentro do título */
+        .description {
+          
+          /* Campo  com todas as informações das avaliacoes */
+          .avaliacoes {
+            flex-direction: column;
+          }
+        }
+      }
+    }
   }
 
   #footer {
@@ -425,6 +451,14 @@
           }
         }
       }
+    }
+
+    #avaliar-estrelas {
+      flex-direction: column;
+    }
+
+    .venda-entrega {
+      flex-direction: column;
     }
   }
 
