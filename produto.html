@@ -651,9 +651,40 @@
             <div class="comentarios">
               <div class="comentario-titulo">
                 <h3>Comentários</h3>
-                <button id="recentes">mais recentes</button>
+                <label for="recentes"><span>ordenar</span>
+                  <select name="recentes" id="recentes">
+                    <option value="recentes">mais recentes</option>
+                    <option value="mais_antigos">mais antigos</option>
+                    <option value="mais_populares">mais populares</option>
+                  </select>
+                </label>
               </div>
               <div class="comentario">
+                <div class="comment">
+                  <div class="comment_header">
+                    <h3>Título de um comentário</h3>
+                    <div class="stars">
+                      <img src="/assets/icons/star-fill.svg" alt="ícone star">
+                      <img src="/assets/icons/star-fill.svg" alt="ícone star">
+                      <img src="/assets/icons/star-fill.svg" alt="ícone star">
+                      <img src="/assets/icons/star-fill.svg" alt="ícone star">
+                      <img src="/assets/icons/star-fill.svg" alt="ícone star">
+                    </div>
+                  </div>
+                  <div class="comment_content">
+                    <div class="message">
+                      <p>Aqui tem um comentário do usuário.</p>
+                    </div>
+                    <div class="user">
+                      <span>Nome do usuário</span>
+                    </div>
+                  </div>
+                  <div class="comment_footer">
+                    <span>essa avaliação foi útil?</span>
+                    <div class="buttons">
+                      <img src="" alt="">
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

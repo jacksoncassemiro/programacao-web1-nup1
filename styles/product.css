@@ -318,12 +318,6 @@
           display: flex;
           flex-direction: column;
           gap: var(--espaco-grande);
-
-          button {
-            flex-grow: 0;
-            padding: 0;
-            margin: 0;
-          }
           
           /* Informações da nota em estrelas e numero e quantidade de avaliações */
           .nota {
@@ -411,32 +405,40 @@
             }
           }
         }
+
+        .comentarios {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-grande);
+          border: 2px solid var(--cor-separador);
+          border-radius: var(--raio-pequeno);
+          flex-grow: 1;
+
+          .comentario-titulo {
+            padding: var(--espaco-grande) var(--espaco-medio);
+            background-color: var(--cor-separador);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            label {
+              span {
+                font-family: "Roboto-Medium", sans-serif;
+                color: var(--cor-dominante);
+              }
+
+              select {
+                border: none;
+                background-color: transparent;
+                font-family: "Roboto-Medium", sans-serif;
+                padding: var(--espaco-pequeno);
+                outline-color: var(--cor-dominante);
+              }
+            }
+          }
+        }
       }
-    }
-    
-    /* id do botão avaliar produto */
-    #avaliar-produto {
-      display: flex;
-      padding: 12px 50px;
-      margin-bottom: var(--espaco-grande);
-    }
-    
-    
-    /* id da div que contem a nota e as estrelas */
-    #valor-estrelas {
-      display: flex;
-      align-items: center;
-      border-bottom: 1px solid rgb(210, 210, 210);
-    }
-    
-    /* classe que representa a quantidade de pessoas que avaliaram */
-    .quantidade-avaliacoes {
-      margin-left: var(--espaco-pequeno);
-    }
-    
-    /* id contendo todas as imagens das estrelas */
-    #estrelas-comentarios {
-      margin-left: var(--espaco-medio);
     }
 	}
 }
