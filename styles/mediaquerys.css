@@ -102,6 +102,94 @@
     }
   }
 
+  #main {
+    .offers {
+      grid-template-areas: 
+      "of_1 of_1 of_2 of_2"
+      "of_3 of_3 of_4 of_4"
+      "of_5 of_5 of_6 of_6"
+      "of_7 of_7 of_8 of_8"
+      "of_9 of_9 of_9 of_9"
+      "of_10 of_10 of_10 of_10"
+      "of_11 of_11 of_11 of_11";
+  
+      a:nth-child(11) {
+        display: none;
+      }
+    }
+
+    #main__products {
+      
+      .filters {
+        display: none;
+      }
+
+      .products__main {
+        .products__header {
+          flex-wrap: wrap;
+
+          .products__count {
+            width: 100%;
+          }
+          .button_menu_filter {
+            display: flex;
+            flex-grow: 0;
+            padding-left: var(--espaco-grande);
+            padding-right: var(--espaco-grande);
+          }
+        }
+
+        .products {
+          gap: var(--espaco-medio);
+        }
+      }
+
+      #button_menu_filter:checked ~ .filters {
+        display: inherit;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--cor-separador-extra);
+        overflow-y: scroll;
+        z-index: 999;
+
+        padding: var(--espaco-grande);
+        padding-bottom: 70px;
+
+        .button_menu_filter {
+          display: inherit;
+          width: 100%;
+          padding: var(--espaco-grande);
+
+          position: fixed;
+          bottom: 0;
+        }
+
+        .filters__header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          gap: var(--espaco-medio);
+          padding: var(--espaco-medio) var(--espaco-medio) var(--espaco-medio) 0;
+
+          .button_close {
+            cursor: pointer;
+
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   #footer {
 
     .others {
@@ -112,6 +200,10 @@
 }
 
 @media (max-width: 480px) {
+
+  .container {
+		padding: 10px 12px 10px 12px;
+	}
 
   #header {
 
@@ -255,7 +347,157 @@
     }
   }
 
+  #main {
+
+    .carousel {
+      display: none;
+    }
+
+    #plus {
+      order: 1;
+    }
+
+    #products {
+      order: 2;
+    }
+
+    #offers {
+      order: 3;
+    }
+
+    .offers {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "of_1"
+      "of_2"
+      "of_3"
+      "of_4"
+      "of_5"
+      "of_6"
+      "of_7"
+      "of_8"
+      "of_9"
+      "of_10"
+      "of_11";
+  
+      a:nth-child(9), a:nth-child(10) {
+        display: none;
+      }
+    }
+
+    #services {
+      order: 4;
+    }
+
+    #sponsored {
+      order: 5;
+    }
+
+    #main__products {
+      .products__main {
+
+        .products {
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+          .product {
+            min-width: 160px;
+            height: 100%;
+
+            .price {
+          
+              .price__original, .price__pay {
+                font-size: 0.6rem;
+              }
+          
+              .price__original {
+                span:last-child {
+                  font-size: 0.6rem;
+                }
+          
+              }
+          
+              .price__discount {
+                strong:first-child {
+                  font-size: var(--sm-fonte-tamanho);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   #footer {
+
+    .footer_top {
+
+      .container {
+        justify-content: center;
+
+        a {
+          justify-content: center;
+        }
+      }
+    }
+
+    .footer_main {
+
+      .institutional, .questions, .services, .love_digital {
+        min-width: 100%;
+      }
+    }
+  }
+
+}
+
+@media (max-width: 344px) {
+
+  .container {
+		padding: 8px 10px 8px 10px;
+	}
+
+  #header {
+
+    .header__main .container {
+  
+      #menu {
+        gap: var(--espaco-grande);
+      }
+  
+    }
+  }
+
+  #main {
+
+    #main__products {
+      .products__main {
+        .products__header {
+          flex-wrap: wrap;
+
+          .by_order {
+            strong {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+
+    .footer_top {
+
+      .container {
+        justify-content: center;
+
+        a {
+          justify-content: center;
+        }
+      }
+    }
+
     .footer_main {
 
       .institutional, .questions, .services, .love_digital {

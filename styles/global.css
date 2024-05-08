@@ -92,6 +92,7 @@ html {
 
 body {
   background-color: var(--cor-separador-extra);
+  color: var(--cor-texto);
   display: flex;
   flex-direction: column;
 }
@@ -178,8 +179,28 @@ button.next {
   bottom: 40%;
 }
 
-button.next:focus ~ .categories__list {
-  transform: translate(-30%);
+input[type="checkbox"]:not([hidden="true"]) {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--cor-texto);
+  border-radius: var(--raio-pequeno);
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:checked {
+    background-color: var(--cor-dominante);
+    border-color: var(--cor-dominante);
+
+    &:after {
+      content: "\2714";
+      color: var(--cor-neutra);
+    }
+  }
 }
 
 #header {
@@ -221,9 +242,6 @@ button.next:focus ~ .categories__list {
 
 .header__main {
   background-color: var(--cor-dominante);
-  position: sticky;
-  top: 0;
-  z-index: 999;
 }
 
 .header__main .container {
@@ -355,13 +373,14 @@ button.next:focus ~ .categories__list {
       border-radius: 0.25rem;
       box-shadow: var(--sombra-suave);
       border: 1px solid var(--cor-separador-extra);
+      z-index: 3;
 
-      button {
+      a {
         width: 150px;
       }
     }
 
-    a, button#account {
+    & > a, button#account {
       display: flex;
       align-items: center;
       background-color: transparent;
@@ -373,6 +392,8 @@ button.next:focus ~ .categories__list {
       gap: var(--espaco-medio);
       font-size: var(--caption-fonte-tamanho);
       text-align: start;
+      min-width: 24px;
+      min-height: 24px;
     }
 
     #account:hover ~ .account__menu, .account__menu:hover {
@@ -398,6 +419,10 @@ button.next:focus ~ .categories__list {
     padding-bottom: var(--espaco-grande);
     overflow: hidden;
     position: relative;
+
+    button.next:focus ~ .categories__list {
+      transform: translate(-30%);
+    }
 
     .container__menu, label, .container__account {
       display: none;
@@ -430,6 +455,7 @@ button.next:focus ~ .categories__list {
       margin-right: var(--espaco-medio);
       text-align: center;
       width: 72px;
+      scroll-snap-type: x proximity;
 
       span {
         display: flex;
@@ -463,6 +489,8 @@ button.next:focus ~ .categories__list {
   flex-direction: column;
   flex-grow: 1;
   gap: var(--espaco-grande);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #footer {
@@ -717,4 +745,126 @@ button.next:focus ~ .categories__list {
 
 #menu_footer:checked ~ .footer_main .button_up {
   display: inherit;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-grande);
+  padding: var(--espaco-grande);
+
+  aspect-ratio: 2/4;
+  min-width: 200px;
+  width: 200px;
+  background-color: var(--cor-neutra);
+  border: 2px solid var(--cor-separador-extra);
+  color: var(--cor-texto);
+  border-radius: var(--raio-medio);
+  box-shadow: var(--sombra-suave);
+  cursor: pointer;
+  scroll-snap-type: x proximity;
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-medio);
+
+    img {
+      aspect-ratio: 1/1;
+      object-fit: contain;
+      object-position: center;
+      border-radius: var(--raio-pequeno);
+    }
+
+    figcaption {
+      h3 {
+        font-size: var(--paragrafo-fonte-tamanho);
+        line-height: var(--paragrafo-line-height);
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+      }
+    }
+  }
+
+  .rating {
+    display: flex;
+    gap: var(--espaco-medio);
+
+    strong {
+      font-size: 0.75rem;
+    }
+  }
+
+  .price {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-pequeno);
+    
+    .price__original, .price__pay, .price__discount {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espaco-medio);
+      font-size: var(--caption-fonte-tamanho);
+      line-height: var(--caption-line-height);
+    }
+
+    .price__original, .price__pay {
+      font-size: 0.75rem;
+    }
+
+    .price__original {
+      flex-direction: row;
+      align-items: baseline;
+      
+      span:first-child {
+        text-decoration: line-through;
+        color: var(--cor-texto-neutra);
+      }
+
+      span:last-child {
+        font-family: "Roboto-Bold", sans-serif;
+        background-color: #07aa07;
+        color: var(--cor-neutra);
+        padding: var(--espaco-pequeno);
+        border-radius: var(--raio-pequeno);
+        font-size: 0.7rem;
+      }
+
+    }
+
+    .price__discount {
+      margin-top: var(--espaco-grande);
+      gap: var(--espaco-pequeno);
+      
+      strong:first-child {
+        font-size: var(--md-fonte-tamanho);
+      }
+    }
+  }
+
+  .delivery {
+    font-size: 0.8rem;
+    color: #07aa07;
+    background-color: #d9ffd9;
+    width: max-content;
+    padding: var(--espaco-pequeno) var(--espaco-medio);
+    border-radius: var(--raio-pequeno);
+  }
+}
+
+.stars {
+  display: flex;
+  gap: var(--espaco-pequeno);
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.product:hover {
+  border-color: var(--cor-dominante);
 }

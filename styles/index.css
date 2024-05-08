@@ -1,0 +1,360 @@
+@keyframes carousel {
+  0% {
+    display: flex;
+    width: 100%;
+  }
+  19% {
+    display: flex;
+    width: 100%;
+  }
+  20% {
+    display: none;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes select_banner {
+  0% {
+    background-color: var(--cor-dominante);
+  }
+  19% {
+    background-color: var(--cor-dominante);
+  }
+  20% {
+    background-color: var(--cor-texto);
+  }
+  100% {
+    background-color: var(--cor-texto);
+  }
+}
+
+.carousel {
+  position: relative;
+
+  .button_banner {
+    position: absolute;
+    bottom: 20px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid var(--cor-texto);
+    background-color: var(--cor-texto);
+    border-radius: 50%;
+    box-shadow: var(--sombra-profunda);
+    cursor: pointer;
+
+    animation-name: select_banner;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+
+    &:nth-child(1) {
+      left: calc(50% - 68px);
+      animation-delay: 0s;
+    }
+  
+    &:nth-child(2) {
+      left: calc(50% - 38px);
+      animation-delay: 2s;
+    }
+  
+    &:nth-child(3) {
+      left: calc(50% - 8px);
+      animation-delay: 4s;
+    }
+  
+    &:nth-child(4) {
+      left: calc(50% + 22px);
+      animation-delay: 6s;
+    }
+  
+    &:nth-child(5) {
+      left: calc(50% + 52px);
+      animation-delay: 8s;
+    }
+  }
+
+  .banners {
+    display: flex;
+    flex-grow: 1;
+    aspect-ratio: 16/4;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+
+    .banner {
+      display: flex;
+      flex-grow: 1;
+      aspect-ratio: 16/4;
+      cursor: pointer;
+  
+      animation-name: carousel;
+      animation-duration: 10s;
+      animation-fill-mode: forwards;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-play-state: running;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+  
+      &:nth-child(2) {
+        animation-delay: 2s;
+      }
+  
+      &:nth-child(3) {
+        animation-delay: 4s;
+      }
+  
+      &:nth-child(4) {
+        animation-delay: 6s;
+      }
+  
+      &:nth-child(5) {
+        animation-delay: 8s;
+      }
+    }
+  }
+
+  &:hover .button_banner, &:hover .banner {
+    animation-play-state: paused;
+    animation-name: none;
+  }
+
+  .button_banner:hover ~ .banners .banner {
+    display: none;
+  }
+
+  .button_banner:nth-of-type(1):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(1) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(2):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(2) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(3):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(3) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(4):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(4) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+  .button_banner:nth-of-type(5):hover {
+
+    animation-name: select_banner;
+    animation-duration: 1s;
+    animation-delay: 0s;
+
+    ~ .banners .banner:nth-of-type(5) {
+      animation-name: carousel;
+      animation-duration: 1s;
+      animation-delay: 0s;
+    }
+
+  }
+
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-extra-grande);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  h2 {
+    width: 100%;
+    font-size: var(--lg-fonte-tamanho);
+  }
+
+  .products {
+    display: flex;
+    gap: var(--espaco-grande);
+    transition: transform 0.4s ease;
+  }
+  
+  &#products button.previes {
+    bottom: 40%;
+  }
+  
+  &#products button.next {
+    bottom: 40%;
+  }
+
+  &#products button.next:focus ~ .products, &#services button.next:focus ~ .services, &#sponsored button.next:focus ~ .products, &#plus button.next:focus ~ .plus {
+    transform: translate(-40%);
+  }
+
+  .offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--espaco-grande);
+    grid-template-areas: 
+    "of_1 of_2 of_3 of_4"
+    "of_5 of_6 of_7 of_8"
+    "of_9 of_9 of_10 of_10"
+    "of_11 of_11 of_11 of_11";
+
+    a:hover {
+      transform: scale(1.02);
+    }
+
+    a {
+      transition: transform 0.4s ease;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    a:nth-child(1) {
+      grid-area: of_1;
+    }
+
+    a:nth-child(2) {
+      grid-area: of_2;
+    }
+
+    a:nth-child(3) {
+      grid-area: of_3;
+    }
+
+    a:nth-child(4) {
+      grid-area: of_4;
+    }
+
+    a:nth-child(5) {
+      grid-area: of_5;
+    }
+
+    a:nth-child(6) {
+      grid-area: of_6;
+    }
+
+    a:nth-child(7) {
+      grid-area: of_7;
+    }
+
+    a:nth-child(8) {
+      grid-area: of_8;
+    }
+
+    a:nth-child(9) {
+      grid-area: of_9;
+    }
+
+    a:nth-child(10) {
+      grid-area: of_10;
+    }
+
+    a:nth-child(11) {
+      grid-area: of_11;
+    }
+  }
+
+  .services {
+    display: flex;
+    gap: var(--espaco-grande);
+    transition: transform 0.4s ease;
+
+    a:hover {
+      transform: scale(1.02);
+    }
+
+    a {
+      transition: transform 0.4s ease;
+      aspect-ratio: 4/5;
+      min-width: 200px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &#services button.previes {
+    bottom: 35%;
+  }
+  
+  &#services button.next {
+    bottom: 35%;
+  }
+
+  .plus {
+    display: flex;
+    gap: var(--espaco-grande);
+    transition: transform 0.4s ease;
+
+    a:hover {
+      transform: scale(1.04);
+    }
+
+    a {
+      transition: transform 0.4s ease;
+      aspect-ratio: 1/1;
+      min-width: 90px;
+      min-height: 90px;
+      width: 90px;
+      height: 90px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &#plus button.previes {
+    bottom: 18%;
+  }
+  
+  &#plus button.next {
+    bottom: 18%;
+  }
+}
