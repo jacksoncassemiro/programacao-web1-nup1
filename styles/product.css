@@ -154,11 +154,6 @@
               font-size: 0.7rem;
             }
           }
-          
-          .valor-principal {
-            display: flex;
-            gap: var(--espaco-pequeno);
-          }
 
           .valor-desconto {
             display: flex;
@@ -312,12 +307,17 @@
       .avaliacoes {
         display: flex;
         gap: var(--espaco-grande);
+        flex-wrap: wrap;
         
         /* Contem as informações do botão e das notas nas estrelas */
         .avaliar {
           display: flex;
           flex-direction: column;
           gap: var(--espaco-grande);
+
+          button {
+            flex-grow: 0;
+          }
           
           /* Informações da nota em estrelas e numero e quantidade de avaliações */
           .nota {
@@ -434,6 +434,50 @@
                 font-family: "Roboto-Medium", sans-serif;
                 padding: var(--espaco-pequeno);
                 outline-color: var(--cor-dominante);
+              }
+            }
+          }
+
+          .comentario {
+            display: flex;
+            flex-direction: column;
+            gap: var(--espaco-medio);
+            padding: var(--espaco-grande);
+
+            .comment {
+              display: flex;
+              flex-direction: column;
+              gap: var(--espaco-grande);
+              border: 2px solid var(--cor-separador);
+              border-radius: var(--raio-pequeno);
+              padding: var(--espaco-grande);
+
+              .comment_header, .comment_content {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                gap: var(--espaco-medio);
+                flex-direction: column;
+                width: 100%;
+              }
+
+              .comment_footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: var(--espaco-medio);
+
+                .buttons {
+                  display: flex;
+                  gap: var(--espaco-medio);
+                  align-items: center;
+
+                  img {
+                    cursor: pointer;
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
               }
             }
           }
