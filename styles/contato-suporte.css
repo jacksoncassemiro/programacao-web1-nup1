@@ -180,10 +180,15 @@
       gap: var(--espaco-medio);
       align-items: center;
       
+      &:hover {
+        text-decoration: underline;
+      }
+      
       span {
         font-size: var(--paragrafo-fonte-tamanho);
         text-align: start;
         width: max-content;
+
       }
 
       img {
