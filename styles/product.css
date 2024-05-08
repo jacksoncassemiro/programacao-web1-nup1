@@ -259,64 +259,159 @@
     
     /* Titulo contendo o icone */
     .title {
-      width: 100%;
       list-style: none;
+      overflow: hidden;
+      width: 100%;
+      padding: var(--espaco-grande);
       cursor: pointer;
-      font-weight: 600;
-      padding: 16px;
-      position: relative;
-    
-      img {
-        position: absolute;
-        right: 16px;
-        transform: translateY(-50%);
-        top: 50%;
+      font-family: "Roboto-Medium", sans-serif;
+      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--espaco-grande);
+  
+      input:checked ~ .title img {
+        transform: rotate(180deg);
       }
     }
     
     /* Classe da caixa que está dentro do título */
     .description {
-      font-size: 14px;
-      line-height: 30px;
-      padding: 16px;
-    }
-    
-    .description p {
-      margin-bottom: 10px;
-    }
-    
-    /* Tabela ficha técnica */
-    .tabela {
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    .tabela td {
-      border: 1px solid #ffffff;
-      border-radius: 4px;
-      padding: 6px;
-      text-align: left;
-    }
-    
-    .tabela tr:nth-child(odd) {
-      background-color: rgb(242, 242, 242);
-      font-size: var(--caption-fonte-tamanho);
-    }
-    .tabela tr:nth-child(even) {
-      background-color: var(--cor-neutra);
-      font-size: var(--caption-fonte-tamanho);
-    }
-    
-    /* Campo  com todas as informações das avaliacoes */
-    .avaliacoes {
-      display: flex;
-      gap: var(--espaco-extra-grande);
-    }
-    
-    /* Contem as informações do botão e das notas nas estrelas */
-    .avaliar {
       display: flex;
       flex-direction: column;
+      gap: var(--espaco-grande);
+      font-size: var(--caption-fonte-tamanho);
+      line-height: var(--paragrafo-line-height);
+      padding: var(--espaco-grande);
+      
+      /* Tabela ficha técnica */
+      .tabela {
+        border-collapse: collapse;
+        width: 100%;
+        
+        td {
+          border: 1px solid #ffffff;
+          border-radius: 4px;
+          padding: 6px;
+          text-align: left;
+        }
+        
+        tr:nth-child(odd) {
+          background-color: rgb(242, 242, 242);
+          font-size: var(--caption-fonte-tamanho);
+        }
+
+        tr:nth-child(even) {
+          background-color: var(--cor-neutra);
+          font-size: var(--caption-fonte-tamanho);
+        }
+      }
+      
+      /* Campo  com todas as informações das avaliacoes */
+      .avaliacoes {
+        display: flex;
+        gap: var(--espaco-grande);
+        
+        /* Contem as informações do botão e das notas nas estrelas */
+        .avaliar {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-grande);
+
+          button {
+            flex-grow: 0;
+            padding: 0;
+            margin: 0;
+          }
+          
+          /* Informações da nota em estrelas e numero e quantidade de avaliações */
+          .nota {
+            border: 2px solid var(--cor-separador);
+            border-radius: var(--raio-pequeno);
+            
+            /* Id do nome: nota */
+            #nome-nota {
+              padding: var(--espaco-medio);
+              border-bottom: 2px solid var(--cor-separador);
+              background-color: rgb(210, 210, 210);
+            }
+            
+            /* id do valor da nota que o aplicativo tem */
+            .nota-info {
+              padding: var(--espaco-medio);
+              display: flex;
+              align-items: center;
+              flex-direction: column;
+              gap: var(--espaco-medio);
+
+              hr {
+                width: 100%;
+                color: var(--cor-separador-extra);
+              }
+
+              .valor-estrelas, .quantidade-avaliacoes {
+                display: flex;
+                align-items: center;
+                padding: var(--espaco-medio);
+                gap: var(--espaco-pequeno);
+
+                span {
+                  font-family: "Roboto-Bold", sans-serif;
+                  font-size: var(--lg-fonte-tamanho);
+                }
+
+                .estrelas {
+                  display: flex;
+                  gap: var(--espaco-pequeno);
+
+                  img {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          .filter {
+            padding: var(--espaco-medio);
+            border: 2px solid var(--cor-separador);
+            border-radius: var(--raio-pequeno);
+
+            display: flex;
+            gap: var(--espaco-medio);
+            flex-direction: column;
+
+            span {
+              margin-bottom: var(--espaco-pequeno);
+              font-size: var(--paragrafo-fonte-tamanho);
+              font-family: "Roboto-Medium", sans-serif;
+            }
+
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: var(--espaco-medio);
+              padding: var(--espaco-pequeno);
+              background-color: transparent;
+              border: 2px solid var(--cor-separador);
+              border-radius: var(--raio-pequeno);
+              font-family: "Roboto-Medium", sans-serif;
+              color: var(--cor-texto-neutra);
+              cursor: pointer;
+              width: 100%;
+
+              .value_star {
+                display: flex;
+                align-items: center !important;
+                font-size: var(--caption-fonte-tamanho);
+              }
+            }
+          }
+        }
+      }
     }
     
     /* id do botão avaliar produto */
@@ -326,27 +421,6 @@
       margin-bottom: var(--espaco-grande);
     }
     
-    /* Informações da nota em estrelas e numero e quantidade de avaliações */
-    .nota {
-      border: 1px solid var(--cor-texto-neutra);
-      border-radius: 4px;
-    }
-    
-    /* Id do nome: nota */
-    #nome-nota {
-      padding: 10px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid var(--cor-texto-neutra);
-      background-color: rgb(210, 210, 210);
-      color: var(--cor-texto-destaque);
-    }
-    
-    /* id do valor da nota que o aplicativo tem */
-    #nota-valor {
-      margin-left: var(--espaco-pequeno);
-      font-size: var(--xl-fonte-tamanho);
-      color: var(--cor-texto-destaque);
-    }
     
     /* id da div que contem a nota e as estrelas */
     #valor-estrelas {
