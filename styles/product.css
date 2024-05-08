@@ -2,7 +2,7 @@
 .geral {
   display: flex;
   flex-direction: column;
-  gap: var(--espaco-extra-grande);
+  gap: var(--espaco-grande);
   padding: var(--espaco-extra-grande);
 	background-color: var(--cor-neutra);
 	border-radius: var(--raio-medio);
@@ -35,65 +35,42 @@
 
 	/* Tem todas as informações presentes de imagens preços e botoes*/
 	.tela-produto {
-		display: flex;
-		justify-content: space-between;
+    width: 100%;
+		display: grid;
     gap: var(--espaco-medio);
+    grid-template-columns: 1fr 1fr;
     
     /* Tem todas as imagens reunidas */
     .images-all {
       display: flex;
+      flex-direction: column;
       width: 100%;
-      
+
       /* Todas as miniaturas */
       .images {
         display: flex;
-        flex-direction: column;
-        gap: var(--espaco-pequeno);
-        max-height: 600px;
-        max-width: 800px;
-      }
-      
-      /* Classe que todas as miniaturas pertencem */
-      .image {
-        height: 100%;
-        width: 100%;
-        margin-left: var(--espaco-extra-grande);
-      }
-      
-      /* Ajuste nas imagens em miniatura */
-      .image img {
-        border: 1px solid rgba(60, 58, 58, 0.5);
-        border-radius: 8px;
-        max-width: 75px;
-        max-height: 75px;
-      }
-      
-      /* Ajuste para efeito ao passar o mouse nas miniaturas */
-      .image img:hover {
-        border-color: black;
-      }
+        gap: var(--espaco-medio);
+        
+        /* Classe que todas as miniaturas pertencem */
+        .image {
+          aspect-ratio: 1/1;
+          flex-grow: 1;
+          padding: var(--espaco-pequeno);
+          border: 2px solid var(--cor-separador-extra);
+          border-radius: var(--raio-pequeno);
+          cursor: pointer;
 
-      /* Imagem principal maior da tela */
-      .select-image {
-        
+          &:hover {
+            border-color: var(--cor-dominante);
+          }
+        }
       }
-      
-      /* Ajuste na imagem principal */
-      .select-image img {
-        
-      }
-      
     }
     /* Todas as informações referente ao preço e ao elementos de botões e etc */
     .tela-preco {
       display: flex;
       flex-direction: column;
       gap: var(--espaco-extra-grande);
-      max-width: 500px;
-      max-height: 580px;
-      height: 100%;
-      width: 100%;
-      margin-right: var(--espaco-extra-grande);
     }
     
     /* Todos os icones de estrelas e compartilhar e o avaliar produto */
