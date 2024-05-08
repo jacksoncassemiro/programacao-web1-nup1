@@ -66,38 +66,52 @@
         }
       }
     }
+
     /* Todas as informações referente ao preço e ao elementos de botões e etc */
     .tela-preco {
       display: flex;
       flex-direction: column;
-      gap: var(--espaco-extra-grande);
-    }
-    
-    /* Todos os icones de estrelas e compartilhar e o avaliar produto */
-    .recursos {
-      display: flex;
-    }
-    
-    /* Icones de compartilhar e favoritar */
-    .acoes {
-      display: flex;
-      gap: var(--espaco-medio);
-      margin-left: auto;
-      margin-right: var(--espaco-extra-grande);
-      width: var(--tamanho-icone-medio);
-    }
-    
-    /* estrelas com a opção de avaliar */
-    #avaliar-estrelas {
-      display: flex;
-      gap: 120px;
-    }
-    
-    /* Todos os icones de estrelas  */
-    .estrelas {
-      display: flex;
-      gap: var(--espaco-pequeno);
-      width: var(--tamanho-icone-medio);
+      gap: var(--espaco-grande);
+      
+      /* Todos os icones de estrelas e compartilhar e o avaliar produto */
+      .recursos {
+        display: flex;
+        gap: var(--espaco-medio);
+        justify-content: space-between;
+        align-items: center;
+        
+        /* estrelas com a opção de avaliar */
+        #avaliar-estrelas {
+          display: flex;
+          gap: var(--espaco-medio);
+          align-items: center;
+          font-size: var(--paragrafo-fonte-tamanho);
+          
+          /* Todos os icones de estrelas  */
+          .estrelas {
+            display: flex;
+            gap: var(--espaco-pequeno);
+            
+            img {
+              width: 20px;
+              height: 20px;
+            }
+          }
+          
+        }
+        
+        /* Icones de compartilhar e favoritar */
+        .acoes {
+          display: flex;
+          gap: var(--espaco-grande);
+          
+          img {
+            width: var(--tamanho-icone-medio);
+            height: var(--tamanho-icone-medio);
+            cursor: pointer;
+          }
+        }
+      }
     }
     
     /* Legendas e informações que tem haver com o preço */
