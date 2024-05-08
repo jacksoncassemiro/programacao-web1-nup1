@@ -324,18 +324,19 @@ span{
     font-size: var(--caption-fonte-tamanho);
 }
 
-/* Campo avaliacoes */
+/* Campo  com todas as informações das avaliacoes */
 .avaliacoes{
     display: flex;
     gap: var(--espaco-extra-grande);
 }
 
+/* Contem as informações do botão e das notas nas estrelas */
 .avaliar{
     display: flex;
     flex-direction: column;
 }
 
-
+/* id do botão avaliar produto */
 #avaliar-produto{
     display: flex;
     padding: 12px 50px;
@@ -343,11 +344,13 @@ span{
 
 }
 
+/* Informações da nota em estrelas e numero e quantidade de avaliações */
 .nota{
     border: 1px solid var(--cor-texto-neutra);
     border-radius: 4px;
 }
 
+/* Id do nome: nota */
 #nome-nota{
   padding: 10px;
   margin-bottom: 10px;
@@ -357,7 +360,7 @@ span{
 }
 
 
-
+/* id do valor da nota que o aplicativo tem */
 #nota-valor{
     margin-left: var(--espaco-pequeno);
     font-size: var( --xl-fonte-tamanho);
@@ -365,21 +368,21 @@ span{
 
 }
 
+/* id da div que contem a nota e as estrelas */
 #valor-estrelas{
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgb(210, 210, 210);
 }
 
+/* classe que representa a quantidade de pessoas que avaliaram */
 .quantidade-avaliacoes{
     margin-left: var(--espaco-pequeno);
 }
 
+
+/* id contendo todas as imagens das estrelas */
 #estrelas-comentarios{
   margin-left: var(--espaco-medio);
 }
 
-.comentario-titulo{
-    display: flex;
-    background-color: var(--cor-separador);
- }
