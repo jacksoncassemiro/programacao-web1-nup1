@@ -251,42 +251,37 @@
             <div class="elementos-preco">
               <div class="venda-entrega">
                 <p>Vendido e entregue por</p>
-                <img src="/assets/images/logo/svg/logo-primary-vermelho.svg" id="logo-americanas"
-                  alt="imagem logo americanas">
+                <img src="/assets/images/logo/svg/logo-primary-vermelho.svg" id="logo-americanas" alt="imagem logo americanas">
               </div>
               <div class="preco">
-                <div class="preco-desconto">
-                  <p><s>R$ 1.419,00</s></p>
-                  <span id="desconto">&#9660;26%</span>
+                <div class="preco-original">
+                  <span><s>R$ 1.419,00</s></span>
+                  <span>&#9660; 26%</span>
                 </div>
-                <p><b>R$ 1.054,44</b> ou em até <b>10x de R$ 105,44</b> sem juros</p>
                 <div class="valor-principal">
-                  <h2>R$ 949,00</h2>
-                  <p id="complemento"><b>no pix</b></p>
+                  <span><strong>R$ 1.054,44</strong> ou em até <strong>10x de</strong></span>
+                  <span><strong>R$ 105,44</strong> sem juros ou</span>
+                </div>
+                <div class="valor-desconto">
+                  <strong>R$ 949,00</strong>
+                  <strong>no pix</strong>
                 </div>
               </div>
-              <div class="seguro">
-                <label for="selecao">
-                  <input type="checkbox" id="selecao">
-                </label>
-                <img src="/assets/icons/secury.svg" alt="">
-                <p id="legenda">1 ano de seguro roubo e furto qualificado + quebra acidental em até 6x de R$
-                  45,79 s/ juros.</p>
-              </div>
+              <label for="selecao" class="seguro">
+                <input type="checkbox" id="selecao">
+                <img src="/assets/icons/secury.svg" alt="ícone de seguro">
+                <p id="legenda">1 ano de <strong>seguro roubo e furto qualificado + quebra acidental</strong> em até 6x de <strong>R$ 45,79</strong> s/ juros.</p>
+              </label>
             </div>
             <div class="compra">
-              <button class="button_primary">comprar agora</button>
-              <button class="button_secondary">adicionar à sacola</button>
+              <button type="button" class="button_primary">comprar agora</button>
+              <button type="button" class="button_secondary">adicionar à sacola</button>
             </div>
             <form class="frete">
-              <p>Calcule o frete mais próximo</p>
+              <p>calcule o frete mais próximo</p>
               <div class="cep">
-                <div>
-                  <input type="number" placeholder="Digite seu CEP" id="frete">
-                </div>
-                <div>
-                  <button class="button_secondary" id="ok">ok</button>
-                </div>
+                <input type="number" placeholder="Digite seu CEP" id="frete">
+                <button class="button_primary" id="consultar">consultar</button>
               </div>
             </form>
           </div>

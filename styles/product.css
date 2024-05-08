@@ -37,7 +37,7 @@
 	.tela-produto {
     width: 100%;
 		display: grid;
-    gap: var(--espaco-medio);
+    gap: var(--espaco-grande);
     grid-template-columns: 1fr 1fr;
     
     /* Tem todas as imagens reunidas */
@@ -71,7 +71,7 @@
     .tela-preco {
       display: flex;
       flex-direction: column;
-      gap: var(--espaco-grande);
+      gap: var(--espaco-extra-grande);
       
       /* Todos os icones de estrelas e compartilhar e o avaliar produto */
       .recursos {
@@ -112,100 +112,128 @@
           }
         }
       }
+      
+      /* Legendas e informações que tem haver com o preço */
+      .elementos-preco {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-grande);
+        
+        .venda-entrega {
+          display: flex;
+          gap: var(--espaco-medio);
+          
+          #logo-americanas {
+            width: 100px;
+          }
+        }
+        
+        /* Todas as informações de preço */
+        .preco {
+          display: flex;
+          flex-direction: column;
+          gap: var(--espaco-pequeno);
+          
+          .preco-original, .valor-principal {
+            font-size: var(--paragrafo-fonte-tamanho);
+          }
+
+          .preco-original {
+            display: flex;
+            flex-direction: row;
+            gap: var(--espaco-grande);
+            align-items: center;
+            
+            /* Espaço com o desconto do produto */
+            span:last-child {
+              font-family: "Roboto-Bold", sans-serif;
+              background-color: #07aa07;
+              color: var(--cor-neutra);
+              padding: var(--espaco-pequeno);
+              border-radius: var(--raio-pequeno);
+              font-size: 0.7rem;
+            }
+          }
+          
+          .valor-principal {
+            display: flex;
+            gap: var(--espaco-pequeno);
+          }
+
+          .valor-desconto {
+            display: flex;
+            flex-direction: column;
+            line-height: var(--caption-line-height);
+            margin-top: var(--espaco-grande);
+            
+            strong:first-child {
+              font-size: var(--lg-fonte-tamanho);
+            }
+          }
+        }
+        
+        /* Informações de seguro e opção de marcar o checkbox */
+        .seguro {
+          display: flex;
+          gap: var(--espaco-grande);
+          align-items: center;
+          cursor: pointer;
+          line-height: var(--paragrafo-line-height);
+          font-size: var(--paragrafo-fonte-tamanho);
+
+          input {
+            min-width: 20px;
+            min-height: 20px;
+          }
+
+          img {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+
+      /* Os dois botões de Comprar Agora e Adicionar à sacola */
+      .compra {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+
+        button {
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+        }
+      }
+
+      .frete {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+
+        /* Campo de cep ,legenda e botão de OK */
+        .cep {
+          display: flex;
+          
+          /* Id da caixa de digitar o frete */
+          #frete {
+            padding: var(--espaco-pequeno) var(--espaco-grande);
+            border-radius: var(--raio-pequeno);
+            outline-color: var(--cor-dominante);
+            border: 2px solid var(--cor-separador-extra);
+            width: 100%;
+            font-size: var(--caption-fonte-tamanho);
+          }
+          /* id do botão OK ao lado do Cep */
+          #consultar {
+            padding: 1rem;
+            margin-left: var(--espaco-medio);
+          }
+        }
+      }
     }
     
-    /* Legendas e informações que tem haver com o preço */
-    .elementos-preco {
-      display: flex;
-      flex-direction: column;
-      gap: var(--espaco-extra-grande);
-    }
-    
-    .venda-entrega {
-      display: flex;
-      gap: var(--espaco-medio);
-    }
-    
-    #logo-americanas {
-      width: 100px;
-    }
-    
-    /* Todas as informações de preço */
-    .preco {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .preco-desconto {
-      display: flex;
-      flex-direction: row;
-      gap: var(--espaco-grande);
-      align-items: center;
-    }
-    
-    /* Espaço com o desconto do produto */
-    #desconto {
-      background-color: green;
-      max-width: 60px;
-      border-radius: 10px;
-      color: white;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-    
-    /* Informação que fica do lado do valor principal(o maior) */
-    #complemento {
-      margin-top: auto;
-    }
-    
-    /* Maior valor na tela com o preço */
-    .valor-principal {
-      display: flex;
-      gap: var(--espaco-pequeno);
-    }
-    
-    /* Informações de seguro e opção de marcar o checkbox */
-    .seguro {
-      display: flex;
-      gap: var(--espaco-extra-grande);
-      justify-content: center;
-      align-items: center;
-    }
-    
-    /* Id do checkbox */
-    #selecao {
-      height: 20px;
-      width: 20px;
-    }
-    
-    /* Os dois botões de Comprar Agora e Adicionar à sacola */
-    .compra {
-      display: flex;
-      flex-direction: column;
-      gap: var(--espaco-medio);
-    }
-    
-    /* Campo de cep ,legenda e botão de OK */
-    .cep {
-      display: flex;
-    }
-    
-    /* Id da caixa de digitar o frete */
-    #frete {
-      padding: 1rem;
-      border-radius: var(--raio-pequeno);
-      outline-color: var(--cor-secundaria);
-      border: 1px solid var(--cor-texto-destaque);
-      width: 100%;
-    }
-    /* id do botão OK ao lado do Cep */
-    #ok {
-      padding: 1rem;
-      margin-left: var(--espaco-medio);
-    }
 	}
 }
-
 
 /* Todas as informações sobre as descrições */
 .info {
