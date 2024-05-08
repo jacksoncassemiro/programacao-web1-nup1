@@ -10,6 +10,10 @@ h2{
     }
  }
 
+ p{
+    color: var(--cor-texto);
+ }
+
 hr{
     margin-bottom: 30px;
     border-color: rgb(210, 210, 210);
@@ -123,7 +127,7 @@ span{
     display: flex;
     gap: var(--espaco-medio);
     margin-left:auto;
-    margin-right: 20px;
+    margin-right: var(--espaco-extra-grande);
     width: var(--tamanho-icone-medio);
 }
 
@@ -164,6 +168,23 @@ span{
     flex-direction: column;
 }
 
+.preco-desconto{
+    display: flex;
+    flex-direction: row;
+    gap: var(--espaco-grande );
+    align-items: center;
+}
+
+/* Espaço com o desconto do produto */
+#desconto{
+    background-color: green;
+    max-width: 60px;
+    border-radius: 10px;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
 /* Informação que fica do lado do valor principal(o maior) */
 #complemento{
     margin-top: auto;
@@ -178,7 +199,9 @@ span{
 /* Informações de seguro e opção de marcar o checkbox */
  .seguro{
     display: flex;
-    gap: var(--espaco-pequeno);
+    gap: var(--espaco-extra-grande);
+    justify-content: center;
+    align-items: center;
  }
 
 
@@ -354,9 +377,6 @@ span{
 
 #estrelas-comentarios{
   margin-left: var(--espaco-medio);
-}
-
-.estrela-numero{
 }
 
 .comentario-titulo{
