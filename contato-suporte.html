@@ -309,10 +309,10 @@
             <span>abrir chat</span>
           </button>
           <hr>
-          <button>
+          <label for="menu_modal">
             <img src="/assets/icons/envelope.svg" alt="">
             <span>enviar um e-mail</span>
-          </button>
+          </label>
           <hr>
           <button>
             <img src="/assets/icons/universal-access-2.svg" alt="">
@@ -467,6 +467,54 @@
       </div>
     </div>
   </footer>
+  <input id="menu_modal" title="menu header" placeholder="menu header" type="checkbox" hidden="true" value="false">
+  <div class="modal container">
+    <form class="modal__content">
+      <div class="modal__header">
+        <span>fale conosco</span>
+        <label class="menu_modal" for="menu_modal">
+          <img src="/assets/icons/x-lg.svg" alt="ícone de fechar">
+        </label>
+      </div>
+      <div class="modal__body">
+        <h2>como podemos te ajudar?</h2>
+        <label for="email">e-mail do titular da compra
+          <input type="email" id="email" required></label>
+        <label for="identify">CPF ou CNPJ do titular
+          <input id="identify" type="text" required>
+        </label>
+        <label for="name">nome
+          <input id="name" type="text" required>
+        </label>
+        <label for="category">como podemos te ajudar?
+          <select name="category" id="category" required>
+            <option value="" selected disabled></option>
+            <option value="compra">compra</option>
+            <option value="entrega">entrega</option>
+            <option value="devolução">devolução</option>
+            <option value="troca">troca</option>
+            <option value="cadastro">cadastro</option>
+            <option value="servicos">serviços</option>
+            <option value="outros">outros</option>
+          </select>
+        </label>
+        <label for="title">descrição do produto
+          <input id="title" type="text" required>
+        </label>
+        <label for="message">ajude-nos a entender
+          <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+        </label>
+        <label for="anexos">anexos
+          <input id="anexos" type="file">
+        </label>
+      </div>
+      <div class="modal__footer">
+        <label for="menu_modal">
+          <button class="button_primary" type="submit">enviar</button>
+        </label>
+      </div>
+    </form>
+  </div>
 </body>
 
 </html>

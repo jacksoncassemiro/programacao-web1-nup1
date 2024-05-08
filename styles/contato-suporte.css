@@ -170,7 +170,7 @@
     background-color: var(--cor-dominante);
     flex-wrap: wrap;
     
-    button {
+    button, label {
       background-color: transparent;
       color: var(--cor-neutra);
       border: none;
@@ -183,7 +183,7 @@
       &:hover {
         text-decoration: underline;
       }
-      
+
       span {
         font-size: var(--paragrafo-fonte-tamanho);
         text-align: start;
@@ -197,4 +197,90 @@
       }
     }
   }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.500);
+  display: flex;
+  z-index: 999;
+  display: none;
+
+  .modal__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-medio);
+    width: 400px;
+    max-height: 100%;
+    padding: var(--espaco-grande);
+    border-radius: var(--raio-medio);
+    background-color: var(--cor-neutra);
+    margin: auto;
+    position: relative;
+
+    .modal__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--espaco-medio);
+      width: 100%;
+      padding-bottom: var(--espaco-medio);
+
+      img {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+    }
+
+    .modal__body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--espaco-grande);
+      overflow: auto;
+      padding-bottom: 50px;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        gap: var(--espaco-medio);
+
+        input, select, textarea {
+          padding: var(--espaco-medio);
+          border-radius: var(--raio-pequeno);
+          border: 1px solid var(--cor-separador);
+          box-shadow: var(--sombra-suave);
+          outline-color: var(--cor-dominante);
+        }
+      }
+    }
+
+    .modal__footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      width: 100%;
+      
+      label {
+        width: 100%;
+        display: flex;
+
+        button {
+          padding: var(--espaco-medio);
+        }
+      }
+    }
+  }
+}
+
+#menu_modal:checked ~ .modal {
+  display: flex;
 }
