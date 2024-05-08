@@ -4,8 +4,20 @@ h2{
 }
 
 /* Avaliar e informações do produto */
-a{
-    text-decoration: underline;
+ a{
+    &:hover{
+        color: var(--cor-dominante);
+    }
+ }
+
+hr{
+    margin-bottom: 30px;
+    border-color: rgb(210, 210, 210);
+}
+
+span{
+ margin-top: 20px;
+ margin-bottom: 20px;
 }
 
 /* Todas as informações da tela do produto até a parte do preço e fotos */
@@ -30,7 +42,8 @@ a{
 .tela-produto {
     display: flex;
     justify-content: center;
-
+    margin-bottom: var(--espaco-extra-grande);
+    margin-top: var(--espaco-extra-grande);
   
 }
 
@@ -70,7 +83,7 @@ a{
 .image{
     height: 100%;
     width: 100%;
-    margin-left: 20px;
+    margin-left: var(--espaco-extra-grande);
 }
 
 
@@ -96,6 +109,7 @@ a{
     max-height: 580px;
     height: 100%;
     width: 100%;
+    margin-right: var(--espaco-extra-grande);
     
 }
 
@@ -110,13 +124,22 @@ a{
     gap: var(--espaco-medio);
     margin-left:auto;
     margin-right: 20px;
+    width: var(--tamanho-icone-medio);
 }
 
+/* estrelas com a opção de avaliar */
+#avaliar-estrelas{
+    display: flex;
+    gap: 120px;
+}
 
-/* Todos os icones de estrelas e a opção avaliar produtos */
+/* Todos os icones de estrelas  */
 .estrelas{
     display: flex;
     gap: var(--espaco-pequeno);
+    width: var(--tamanho-icone-medio);
+  
+    
 }
 
 /* Legendas e informações que tem haver com o preço */
@@ -124,6 +147,15 @@ a{
     display: flex;
     flex-direction: column;
     gap: var(--espaco-extra-grande);
+}
+
+.venda-entrega{
+    display: flex;
+    gap: var(--espaco-medio);
+}
+
+#logo-americanas{
+    width: 100px;
 }
 
 /* Todas as informações de preço */
@@ -154,6 +186,7 @@ a{
  #selecao{
     height: 20px;
     width: 20px;
+    
  }
 
  /* Os dois botões de Comprar Agora e Adicionar à sacola */
@@ -236,7 +269,6 @@ a{
 
 /* Classe da caixa que está dentro do título */
 .description{
-    border-top: 1px solid rgb(210, 210, 210);
     font-size: 14px;
     line-height: 30px;
     padding: 16px; 
@@ -275,13 +307,59 @@ a{
     gap: var(--espaco-extra-grande);
 }
 
-.comentario-titulo{
-   display: flex;
-   background-color: var(--cor-separador);
+.avaliar{
+    display: flex;
+    flex-direction: column;
 }
+
 
 #avaliar-produto{
     display: flex;
     padding: 12px 50px;
+    margin-bottom: var(--espaco-grande);
 
 }
+
+.nota{
+    border: 1px solid var(--cor-texto-neutra);
+    border-radius: 4px;
+}
+
+#nome-nota{
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--cor-texto-neutra);
+  background-color:rgb(210, 210, 210);
+  color: var(--cor-texto-destaque);
+}
+
+
+
+#nota-valor{
+    margin-left: var(--espaco-pequeno);
+    font-size: var( --xl-fonte-tamanho);
+    color: var(--cor-texto-destaque);
+
+}
+
+#valor-estrelas{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(210, 210, 210);
+}
+
+.quantidade-avaliacoes{
+    margin-left: var(--espaco-pequeno);
+}
+
+#estrelas-comentarios{
+  margin-left: var(--espaco-medio);
+}
+
+.estrela-numero{
+}
+
+.comentario-titulo{
+    display: flex;
+    background-color: var(--cor-separador);
+ }

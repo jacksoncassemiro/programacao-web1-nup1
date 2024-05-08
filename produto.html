@@ -50,12 +50,14 @@
                 </div>
                 <div class="tela-preco">
                     <div class="recursos">
-                        <div class="estrelas">
-                            <img src="/assets/icons/star-fill.svg" alt="icon star1">
-                            <img src="/assets/icons/star-fill.svg" alt="icon star2">
-                            <img src="/assets/icons/star-fill.svg" alt="icon star3">
-                            <img src="/assets/icons/star-fill.svg" alt="icon star4">
-                            <img src="/assets/icons/star.svg" alt="icon star5">
+                        <div id="avaliar-estrelas">
+                            <div class="estrelas">
+                                <img src="/assets/icons/star-fill.svg" alt="icon star1">
+                                <img src="/assets/icons/star-fill.svg" alt="icon star2">
+                                <img src="/assets/icons/star-fill.svg" alt="icon star3">
+                                <img src="/assets/icons/star-fill.svg" alt="icon star4">
+                                <img src="/assets/icons/star.svg" alt="icon star5">
+                            </div>    
                             <a href=".">Avaliar produto</a>
                         </div>
                         <div class="acoes">
@@ -65,7 +67,10 @@
                         </div>
                     </div>        
                     <div class="elementos-preco">
-                        <p>Vendido e entregue por Americanas</p>
+                        <div class="venda-entrega">
+                            <p>Vendido e entregue por</p>
+                            <img src="/assets/images/logo/svg/logo-primary-vermelho.svg" id="logo-americanas" alt="imagem logo americanas">
+                        </div>
                         <div class="preco">
                             <p><s>R$ 1.419,00</s></p>
                             <div class="valor-principal">
@@ -82,8 +87,8 @@
                         </div>
                     </div>
                     <div class="compra">
-                        <button class="button_primary">Comprar agora</button>
-                        <button class="button_primary">Adicionar à sacola</button>
+                        <button class="button_primary">comprar agora</button>
+                        <button class="button_secondary">adicionar à sacola</button>
                     </div>
                     <form>
                         <p>Calcule o frete mais próximo</p>
@@ -92,7 +97,7 @@
                                 <input type="number" placeholder="Digite seu CEP" id="frete">
                             </div>
                             <div>
-                                <button class="button_secondary" id="ok">OK</button>
+                                <button class="button_secondary" id="ok">ok</button>
                             </div>
                         </div>
                     </form>
@@ -104,6 +109,7 @@
                <summary class="title" id="informacoes">Informações do produto
                    <img src="/assets/icons/chevron-down.svg" class="seta" alt="imagem">
                </summary>
+               <hr>
                <div class="description">
                 <p>Com design moderno o 
                     <strong>Smartphone Moto G54 128GB 5G Wi-Fi Tela 6.5'' Dual Chip 4GB de RAM Câmera Traseira 50MP + 2MP + QVGA - Grafite </strong>
@@ -323,12 +329,37 @@
                         <div class="avaliar">
                             <button class="button_primary" id="avaliar-produto">Avaliar produto</button>
                             <div class="nota">
-                                <h3>Nota</h3>
-                                
+                                <div id="nome-nota">
+                                    <h3>Nota</h3>
+                                </div>
+                                <div class="nota-info">
+                                    <div id="valor-estrelas">
+                                        <p id="nota-valor">4.0</p>
+                                        <div class="estrelas" id="estrelas-comentarios">
+                                            <img src="/assets/icons/star-fill.svg" alt="icon star1">
+                                            <img src="/assets/icons/star-fill.svg" alt="icon star2">
+                                            <img src="/assets/icons/star-fill.svg" alt="icon star3">
+                                            <img src="/assets/icons/star-fill.svg" alt="icon star4">
+                                            <img src="/assets/icons/star.svg" alt="icon star5">
+                                        </div>
+                                    </div>
+                                    <div class="quantidade-avaliacoes">
+                                        <p>92 notas para esse produto</p>
+                                    </div>
+                                </div>   
                             </div>
-                            <span>Filtrar por</span>
+                            <span>filtrar por </span> 
                             <div class="nota-estrelas">
-
+                                <hr>
+                                <p>notas</p>
+                                <div class="estrela-numero">
+                                    <p>1</p>    
+                                    <img src="/assets/icons/star-fill.svg" alt="icon star1">
+                                </div>    
+                                    <img src="/assets/icons/star-fill.svg" alt="icon star2">
+                                    <img src="/assets/icons/star-fill.svg" alt="icon star3">
+                                    <img src="/assets/icons/star-fill.svg" alt="icon star4">
+                                    <img src="/assets/icons/star-fill.svg" alt="icon star5">  
                             </div>
                             <div class="tipo-avaliacao"></div>
                         </div>
