@@ -331,7 +331,6 @@ section {
     display: flex;
     gap: var(--espaco-grande);
     transition: transform 0.4s ease;
-    margin-bottom: var(--espaco-extra-grande);
 
     a:hover {
       transform: scale(1.04);
@@ -352,10 +351,10 @@ section {
   }
 
   &#plus button.previes {
-    bottom: 28%;
+    bottom: 18%;
   }
   
   &#plus button.next {
-    bottom: 28%;
+    bottom: 18%;
   }
 }

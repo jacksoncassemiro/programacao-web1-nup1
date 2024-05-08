@@ -1,49 +1,74 @@
+.container {
+  margin: auto;
+}
 
-main{
+.form_login {
+	display: flex;
+	flex-direction: column;
+	gap: var(--espaco-grande);
+	color: var(--cor-texto);
+	width: 290px;
+
+  h2, p {
+    text-align: center;
+  }
+
+  .form_header {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-}
+    align-items: center;
+    justify-content: center;
+    gap: var(--espaco-medio);
 
-/* tela de login */
-.tela-login{
-    display: flex;
-    flex-direction: column;
-    gap: var(--espaco-grande) ;
-    font-size: 15px;
-    width: 300px;
-    margin: auto;
-
-    h2, p {
-        text-align: center;
+    h2 {
+      font-size: var(--md-fonte-tamanho);
     }
-    label:nth-child(1), label:nth-child(2){
-        display:flex;
-        flex-direction:column;
-        gap:var(--espaco-medio);
-
+    
+    img {
+      filter: invert();
+      height: 22px;
+      width: 22px;
     }
-}
+  }
 
-/* campos de email e senha */
-#email, #senha{
-    padding:0.5rem 0.75rem;
-    border-radius: var(--raio-pequeno);
-    outline-color:var(--cor-secundaria);
-    border: 1px solid var(--cor-texto-destaque);
-    width: 100%;
-}
+  p {
+    font-size: var(--caption-fonte-tamanho);
+    line-height: var(--paragrafo-line-height);
+  }
 
-.icon-login{
+  label {
     display: flex;
     gap: var(--espaco-medio);
-    margin: 0 auto;
+  }
+
+  a:hover {
+    color: var(--cor-dominante);
+    text-decoration-line: underline;
+  }
+
+  label:nth-of-type(1), label:nth-of-type(2) {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-direction: column;
+
+    input {
+      display: flex;
+      flex-grow: 1;
+      padding: var(--espaco-medio);
+      border: 1px solid var(--cor-separador);
+      border-radius: var(--raio-pequeno);
+      font-size: var(--paragrafo-fonte-tamanho);
+      outline-color: var(--cor-dominante);
+    }
+  }
+
+  label:nth-of-type(3) {
+    cursor: pointer;
+  }
+
+  .form_footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-pequeno);
+    text-align: center;
+  }
 }
-
-.icon-medio{
-    filter: invert();
-}
-
-
-
-

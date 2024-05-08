@@ -92,6 +92,7 @@ html {
 
 body {
   background-color: var(--cor-separador-extra);
+  color: var(--cor-texto);
   display: flex;
   flex-direction: column;
 }
@@ -176,6 +177,30 @@ button.previes {
 button.next {
   right: 0;
   bottom: 40%;
+}
+
+input[type="checkbox"]:not([hidden="true"]) {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--cor-texto);
+  border-radius: var(--raio-pequeno);
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:checked {
+    background-color: var(--cor-dominante);
+    border-color: var(--cor-dominante);
+
+    &:after {
+      content: "\2714";
+      color: var(--cor-neutra);
+    }
+  }
 }
 
 #header {
@@ -355,7 +380,7 @@ button.next {
       }
     }
 
-    #menu a, button#account {
+    & > a, button#account {
       display: flex;
       align-items: center;
       background-color: transparent;
@@ -367,6 +392,8 @@ button.next {
       gap: var(--espaco-medio);
       font-size: var(--caption-fonte-tamanho);
       text-align: start;
+      min-width: 24px;
+      min-height: 24px;
     }
 
     #account:hover ~ .account__menu, .account__menu:hover {
@@ -462,6 +489,8 @@ button.next {
   flex-direction: column;
   flex-grow: 1;
   gap: var(--espaco-grande);
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #footer {
@@ -724,7 +753,9 @@ button.next {
   gap: var(--espaco-grande);
   padding: var(--espaco-grande);
 
+  aspect-ratio: 2/4;
   min-width: 200px;
+  width: 200px;
   background-color: var(--cor-neutra);
   border: 2px solid var(--cor-separador-extra);
   color: var(--cor-texto);
@@ -761,16 +792,6 @@ button.next {
   .rating {
     display: flex;
     gap: var(--espaco-medio);
-
-    .stars {
-      display: flex;
-      gap: var(--espaco-pequeno);
-
-      img {
-        width: 16px;
-        height: 16px;
-      }
-    }
 
     strong {
       font-size: 0.75rem;
@@ -831,6 +852,16 @@ button.next {
     width: max-content;
     padding: var(--espaco-pequeno) var(--espaco-medio);
     border-radius: var(--raio-pequeno);
+  }
+}
+
+.stars {
+  display: flex;
+  gap: var(--espaco-pequeno);
+
+  img {
+    width: 16px;
+    height: 16px;
   }
 }
 
