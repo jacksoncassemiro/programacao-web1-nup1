@@ -1,45 +1,28 @@
-let unformatedValue = "0,";
+const formatCurrencyBRL = value => {
+  const typeValue = typeof value;
+  let valueFormated = value.toString();
 
-// limpar valor recebido e muda virgula por ponto
-unformatedValue = unformatedValue.replace(/[^\d,]/g, "").replace(",", ".");
+  if (typeValue !== "number") {
+      valueFormated = value.toString().replace(/[^0-9]/g, "");
+      let valueLength = valueFormated.length;
 
-let valueLeft = "0";
-let valueRight = "00";
+      valueFormated =
+          "0".repeat(Math.max(0, 3 - valueLength)) + valueFormated;
 
-if(unformatedValue.includes(".")){
-  const valueSplit = unformatedValue.split(".");
-  valueLeft = valueSplit[0];
-  valueRight = valueSplit[1];
-}else{
-  valueRight = unformatedValue;
+      valueLength = valueFormated.length;
+
+      valueFormated =
+          valueFormated.slice(0, valueLength - 2) +
+          "." +
+          valueFormated.slice(valueLength - 2, valueLength);
+  }
+
+  valueFormated = new Intl.NumberFormat("pt-BR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+  }).format(valueFormated);
+
+  return valueFormated;
 };
 
-// separa valores após a linha e antes
-const lenLeft = valueLeft.length;
-let lenRight = valueRight.length;
-
-if(lenRight === 3){
-  valueLeft = valueLeft + valueRight.slice(0, 1);
-  valueRight = valueRight.slice(1, 3);
-}else if(lenRight === 1){
-  valueRight = valueLeft.slice(lenLeft - 1, lenLeft) + valueRight;
-  valueLeft = lenLeft === 1 ? "0" : valueLeft.slice(0, lenLeft - 1);
-}
-
-lenRight = valueRight.length;
-lenRight < 2 ? valueRight = "0" + valueRight : valueRight = valueRight;
-
-const withSymbol = false;
-const options = {
-  minimumFractionDigits: 2,
-  maximumFractionDigits: 2
-};
-
-if (withSymbol) {
-  options.style = 'currency';
-  options.currency = 'BRL';
-}
-
-const formattedValue = new Intl.NumberFormat('pt-BR', options).format(valueLeft + "." + valueRight);
-
-console.log(formattedValue)
+console.log(formatCurrencyBRL("asd6000.50"))
